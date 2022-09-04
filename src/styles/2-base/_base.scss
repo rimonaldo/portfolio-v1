@@ -14,6 +14,7 @@ html {
  font-family: sans-serif;
  font-size: 16px;
  overflow-x: hidden;
+ font-family:monsterrat, sans-serif;
  >*{
   margin: 0;
   padding: 0;
@@ -32,9 +33,8 @@ ul{
 }
 
 body {
-  // max-width: 1440px;
   margin: 0 auto;
-  background-color: $clr3;
+  background-color: $clr2;
   color: $clr5;
 }
 

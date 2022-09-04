@@ -11,24 +11,24 @@
       justify-content: space-between;
       max-width: 1200px;
       margin: 0 auto;
-      height: 5vh;
+      height: $headerHeight;
       
       ul {
          display: flex;
          justify-content: space-between;
          @media only screen and (max-width: $break-small) {
             flex-direction: column;
-            padding: 0 42.3%;
-            border: 1px black solid;
+            // padding: 0 42.3%;
+            // border: 1px black solid;
             position: absolute;
-            top: 5vh;
+            top: $headerHeight;
             top: -30rem;
             background-color: $clr6;
             transition: 0.5s;
             left: 0;
             z-index: -1;
             &.show {
-               top: 5vh;
+               top: $headerHeight;
                left: 0;
             }
          }
@@ -37,10 +37,15 @@
             display: flex;
             align-items: center;
             margin-inline-start: 55px;
+            justify-content: center;
             cursor: pointer;
+            width: 100vw;
             @media only screen and (max-width: $break-small) {
                margin: 0;
                line-height: 5rem;
+               &:not(:last-child){
+                  border-bottom: 1px rgba(255, 255, 255, 0.075) solid;
+               }
             }
          }
       }

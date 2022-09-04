@@ -3,7 +3,7 @@
     <div class="full">
       <app-header />
     </div>
-    <item-list />
+    <!-- <item-list /> -->
   </section>
 </template>
 
