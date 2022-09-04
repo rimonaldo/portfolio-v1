@@ -12,22 +12,27 @@
       max-width: 1200px;
       margin: 0 auto;
       height: 5vh;
+      
       ul {
          display: flex;
          justify-content: space-between;
          @media only screen and (max-width: $break-small) {
             flex-direction: column;
-            padding: 0 5em;
+            padding: 0 42.3%;
+            border: 1px black solid;
             position: absolute;
             top: 5vh;
-            border: 1px black solid;
-            right: -15rem;
+            top: -30rem;
             background-color: $clr6;
             transition: 0.5s;
+            left: 0;
+            z-index: -1;
             &.show {
-               right: 0;
+               top: 5vh;
+               left: 0;
             }
          }
+
          li {
             display: flex;
             align-items: center;
@@ -39,6 +44,7 @@
             }
          }
       }
+
       .burger {
          display: none;
          @media only screen and (max-width: $break-small) {
@@ -49,6 +55,7 @@
             content: '\f0c9';
          }
       }
+      
       .logo {
          img {
             min-width: 100%;
