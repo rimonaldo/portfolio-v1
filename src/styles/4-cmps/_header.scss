@@ -4,6 +4,7 @@
    padding: 0 $layoutPadding;
    align-items: center;
    line-height: 3rem;
+   margin-bottom: 5vh;
    // NAV LIST
    .content {
       display: flex;
@@ -16,17 +17,15 @@
       ul {
          display: flex;
          justify-content: space-between;
+         color: $clr5;
          @media only screen and (max-width: $break-small) {
             flex-direction: column;
-            // padding: 0 42.3%;
-            // border: 1px black solid;
             position: absolute;
             top: $headerHeight;
             top: -30rem;
             background-color: $clr6;
             transition: 0.5s;
             left: 0;
-            z-index: -1;
             &.show {
                top: $headerHeight;
                left: 0;
@@ -39,8 +38,8 @@
             margin-inline-start: 55px;
             justify-content: center;
             cursor: pointer;
-            width: 100vw;
             @media only screen and (max-width: $break-small) {
+               width: 100vw;
                margin: 0;
                line-height: 5rem;
                &:not(:last-child){

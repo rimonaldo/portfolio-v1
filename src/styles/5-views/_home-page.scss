@@ -1,0 +1,24 @@
+.home-page {
+   padding: 0 $layoutPadding;
+   font-size: 3rem;
+   z-index: 0;
+   .hero {
+      margin-bottom: 10vh;
+      @media only screen and (max-width: 650px) {
+         margin: 0 auto;
+         width: 100%;
+         font-size: 1.7rem;
+      }
+      h1 {
+         font-size: 1em;
+         margin-bottom: 10px;
+      }
+
+      p {
+         font-size: em(7px);
+         color: rgb(104, 103, 103);
+         width: 60%;
+         margin-bottom: 14px;
+      }
+   }
+}

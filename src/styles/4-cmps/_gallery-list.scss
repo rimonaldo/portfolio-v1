@@ -1,0 +1,46 @@
+.gallery-container {
+   padding: 0 $layoutPadding;
+   .gallery {
+      display: flex;
+      border: 1px black solid;
+      height: 300px;
+      @media only screen and (max-width: $break-narrow) {
+         flex-direction: column-reverse;
+         height: 500px;
+         .images{
+            flex: 2;
+         }
+      }
+      > * {
+         border: 1px black solid;
+         flex: 1;
+      }
+      .text {
+         font-size: 20px;
+         header {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+         }
+         p {
+            margin-bottom: 1em;
+            font-size: 0.7em;
+         }
+      }
+
+      .images {
+         border: 1px red solid;
+         position: relative;
+      }
+   }
+
+   .pager {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: 110%;
+      @media only screen and (max-width: $break-narrow) {
+         top: -10%;
+      }
+   }
+}
