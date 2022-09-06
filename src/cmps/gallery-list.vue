@@ -20,8 +20,8 @@
         <div class="tech">
           <header>Tech used</header>
           <div class="icons">
-            <!-- VUE -->
-              <tech-icons  :iconsToShow="{icons:['vue','vuex','vuer','socket'], names:['Vue','VueX', 'Vue router', 'Socket.io']}"/>
+            <tech-icons :iconsToShow="['vue','vuex','vuer','socket','node','mongodb','cookies']" />
+
           </div>
         </div>
       </div>
