@@ -21,7 +21,7 @@
           <header>Tech used</header>
           <div class="icons">
             <!-- VUE -->
-              <tech-icons  :iconsToShow="['vue','vuex','vuer','socket']"/>
+              <tech-icons  :iconsToShow="{icons:['vue','vuex','vuer','socket'], names:['Vue','VueX', 'Vue router', 'Socket.io']}"/>
           </div>
         </div>
       </div>
