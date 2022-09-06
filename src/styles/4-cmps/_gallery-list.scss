@@ -14,15 +14,22 @@
          flex: 1;
          font-size: 20px;
          header {
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin-bottom: 1em;
+            span{
+               color: $clr1;
+            }
          }
          p {
             margin-bottom: 1em;
-            font-size: 0.7em;
+            font-size: 0.6em;
+         }
+
+         .tech{
+            
          }
       }
-      
+
       .images {
          flex: 3;
          position: relative;
@@ -43,7 +50,7 @@
       }
    }
 
-   .item{
+   .item {
       width: 100%;
       height: 100%;
       background-image: url('https://i.ibb.co/KFBbC84/Scene.png');

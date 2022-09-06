@@ -1,10 +1,10 @@
 <template>
-<section class="footer">
+  <section class="footer">
 
-<h3>footer</h3>
+    <h3>footer</h3>
 
 
-</section>
+  </section>
 </template>
  <script>
  export default {
@@ -19,4 +19,5 @@
  unmounted() {},
   };
   </script>
- <style></style>
+ <style>
+ </style>

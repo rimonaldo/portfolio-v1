@@ -16,8 +16,15 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Quis cupiditate quos quas, repellat nam dolorum.
         </p>
-      </div>
 
+        <div class="tech">
+          <header>Tech used</header>
+          <div class="icons">
+            <!-- VUE -->
+              <tech-icons  :iconsToShow="['vue','vuex','vuer','socket']"/>
+          </div>
+        </div>
+      </div>
       <div class="images">
         <gallery-item :item="item" />
         <div class="pager">
@@ -30,9 +37,10 @@
 </template>
  <script>
   import galleryItem from './gallery-item.vue';
+  import techIcons from './icons.vue';
  export default {
  name: 'ProjectApp',
-    components: {galleryItem},
+    components: {galleryItem,techIcons},
   data() {
    return {};
     },
