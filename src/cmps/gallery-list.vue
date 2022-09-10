@@ -1,10 +1,13 @@
 <template>
   <section class="gallery-container">
+    
+    <header>
+      <h2>Featured <span>projects.</span></h2>
+    </header>
     <section class="gallery">
+
       <div class="text">
-        <header>
-          <h2>Featured <span>projects.</span></h2>
-        </header>
+
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
