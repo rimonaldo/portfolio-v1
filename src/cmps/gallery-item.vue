@@ -1,14 +1,20 @@
 <template>
-  <div class="item">
-    
-  </div>
+  <div class="item" :style="{'backgroundImage': `url(${project})`}"> </div>
+
+
 </template>
  <script>
  export default {
  name: 'ProjectApp',
+ props:{project:String},
     components: {},
   data() {
-   return {};
+   return {
+    projects:{
+      trailo:'https://i.ibb.co/KFBbC84/Scene.png',
+      popCoin:'https://i.ibb.co/pxG17H7/Scene.png',
+    }
+   };
     },
   created() {},
  methods: {},
@@ -16,4 +22,5 @@
  unmounted() {},
   };
   </script>
- <style></style>
+ <style>
+ </style>

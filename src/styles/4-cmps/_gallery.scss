@@ -1,69 +1,97 @@
 .gallery-container {
-
    margin-top: 3em;
    padding: 0 $layoutPadding;
+   border: 1px black solid;
    header {
       @media only screen and (max-width: $break-narrow) {
          text-align: center;
          font-size: 1.4em;
       }
-      font-size: 1.5em;
-      margin-bottom: 1em;
-      span{
+      font-size: 2.5em;
+      // margin-bottom: 2em;
+      span {
          color: $clr1;
       }
    }
    .gallery {
+      >*{
+         // border: 1px red solid;
+      }
       display: flex;
-      // flex-wrap: wrap;
-      height: max(400px,80vw);
-      // flex-direction: column-reverse;
+      height: min(400px, 80vw);
+      position: relative;
       @media only screen and (max-width: $break-narrow) {
          flex-direction: column-reverse;
-      }
-      > * {
-         // border: 1px rgb(0, 0, 0) solid;
+         height: 140vw;
       }
       .text {
-         flex: 1;
+         flex: 2;
          font-size: 18px;
-      
+
          p {
             margin-bottom: 1em;
             font-size: 0.6em;
          }
 
-         .tech{
-
+         .tech {
          }
       }
 
-      .images {
+      // PORTFOLIO
+      .portfolio {
          flex: 3;
          position: relative;
          @media only screen and (max-width: $break-narrow) {
             flex: 1;
          }
       }
-   }
 
-   .pager {
-      position: absolute;
-      left: 0;
-      right: 0;
-      text-align: center;
-      top: 110%;
-      @media only screen and (max-width: $break-narrow) {
-         top: -10%;
+      .pagintaion {
+         // border: 1px red solid;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         margin-left: auto;
+         margin-right: auto;
+         left: 0;
+         right: 0;
+         text-align: center;
+         bottom: 2em;
+         @media only screen and (max-width: $break-narrow) {
+            // bottom: 3em;
+         }
+         button {
+            font-family: fa-solid;
+            padding: 0 0.5em;
+         }
+         :nth-child(1) {
+            &::before {
+               content: '\f053';
+            }
+         }
+         .page {
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 0 1em;
+            background-color: white;
+            transition: 0.5s;
+            &.active {
+               background-color: $clr1;
+            }
+         }
+         :last-child {
+            &::before {
+               content: '\f054';
+            }
+         }
       }
    }
 
    .item {
-      // width: 100%;
-      height: max(300px,100%);
-      
-      background-image: url('https://i.ibb.co/KFBbC84/Scene.png');
-      background-image: url('https://i.ibb.co/xDQd1sV/Scene.png');
+      height: max(300px, 100%);
+      transition: 0.3s;
       background-size: contain;
       background-position: top;
       background-repeat: no-repeat;
