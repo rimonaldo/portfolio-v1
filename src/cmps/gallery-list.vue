@@ -1,12 +1,21 @@
 <template>
+  <header class="gallery-header">
+    <h2>Featured <span>projects.</span></h2>
+  </header>
   <section class="gallery-container">
 
-    <header>
-      <h2>Featured <span>projects.</span></h2>
-    </header>
     <section class="gallery">
+      <div class="portfolio">
+        <gallery-item :project="projects[page]" />
 
+        <div class="pagintaion">
+        <button @click="setPage(-1)"></button>
+        <div :class="[idx === page ? 'active' : '', 'page']" v-for="(project,idx) in projects" :key="idx"></div>
+        <button @click="setPage(1)"></button>
+      </div>
+      </div>
       <div class="text">
+        <header>{{page === 0 ? 'trailo':'popCoin'}}</header>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Aliquam sit asperiores alias ipsam delectus molestiae
@@ -26,16 +35,10 @@
           </div>
         </div>
       </div>
-      <div class="portfolio">
-        <gallery-item :project="projects[page]" />
-      </div>
 
 
-      <div class="pagintaion">
-        <button @click="setPage(-1)"></button>
-        <div :class="[idx === page ? 'active' : '', 'page']" v-for="(project,idx) in projects" :key="idx"></div>
-        <button @click="setPage(1)"></button>
-      </div>
+
+      
     </section>
 
   </section>

@@ -1,36 +1,58 @@
+.gallery-header {
+   padding: 0 $layoutPadding;
+   margin-bottom: 2em;
+   @media only screen and (max-width: $break-narrow) {
+      text-align: center;
+      font-size: 1.4em;
+      margin-bottom: 3em;
+   }
+   font-size: 2.5em;
+   span {
+      color: $clr1;
+   }
+}
+
 .gallery-container {
    margin-top: 3em;
    padding: 0 $layoutPadding;
-   border: 1px black solid;
+   // border: 1px black solid;
+
    header {
+      font-size: 2.5em;
       @media only screen and (max-width: $break-narrow) {
          text-align: center;
          font-size: 1.4em;
       }
-      font-size: 2.5em;
-      // margin-bottom: 2em;
-      span {
-         color: $clr1;
-      }
    }
    .gallery {
-      >*{
+      > * {
          // border: 1px red solid;
       }
       display: flex;
       height: min(400px, 80vw);
       position: relative;
       @media only screen and (max-width: $break-narrow) {
-         flex-direction: column-reverse;
-         height: 140vw;
+         // flex-direction: column-reverse;
+         flex-direction: column;
+         height: 100vw;
       }
       .text {
+
          flex: 2;
          font-size: 18px;
-
+         header {
+            // line-height: 2em;
+            border-bottom: 1px gray solid;
+            // padding-bottom: .5em;
+            // margin-bottom: .5em;
+         }
          p {
             margin-bottom: 1em;
-            font-size: 0.6em;
+            margin-bottom: 1em;
+            font-size: 1em;
+            @media only screen and (max-width: $break-narrow) {
+               // text-align: center;
+            }
          }
 
          .tech {
@@ -42,7 +64,7 @@
          flex: 3;
          position: relative;
          @media only screen and (max-width: $break-narrow) {
-            flex: 1;
+            flex: 2;
          }
       }
 
@@ -57,9 +79,9 @@
          left: 0;
          right: 0;
          text-align: center;
-         bottom: 2em;
+         bottom: 0em;
          @media only screen and (max-width: $break-narrow) {
-            // bottom: 3em;
+            bottom: 1.5em;
          }
          button {
             font-family: fa-solid;
@@ -96,9 +118,19 @@
       background-position: top;
       background-repeat: no-repeat;
       position: relative;
-      bottom: 6%;
+      bottom: 3.5em;
+      // right: 5vw;
       @media only screen and (max-width: $break-narrow) {
+         right: 0vw;
          // height: 300px;
+      }
+      @media only screen and (max-width: 550px) {
+         // bottom: 5em;
+         margin-bottom: 15em;
+      }
+      @media only screen and (max-width: 450px) {
+         // bottom: 5em;
+         margin-bottom: 13em;
       }
    }
 }
