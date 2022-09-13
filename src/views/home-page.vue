@@ -9,7 +9,7 @@
                     corrupti ipsa, repellendus, quibusdam
                 </p>
             </div>
-            <button class="main-btn">My journey</button>
+            <button class="main-btn">Resume</button>
         </div>
     </section>
 

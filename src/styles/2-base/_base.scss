@@ -1,49 +1,71 @@
 ::selection {
-  background-color: $clr1;
-  color: $clr3;
+   background-color: $clr1;
+   color: $clr3;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 html {
- font-family: sans-serif;
- font-size: 16px;
- overflow-x: hidden;
- font-family:monsterrat, sans-serif;
- >*{
-  margin: 0;
-  padding: 0;
-  border: none;
-  list-style: none;
-  text-decoration: none;
- }
-
+   font-family: sans-serif;
+   font-size: 16px;
+   overflow-x: hidden;
+   font-family: monsterrat, sans-serif;
+   > * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      list-style: none;
+      text-decoration: none;
+   }
 }
 
-button{
-  border: none;
-  background-color: rgba(245, 245, 220, 0);
-  cursor: pointer;
+button {
+   border: none;
+   background-color: rgba(245, 245, 220, 0);
+   cursor: pointer;
 }
 
-ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
 body {
-  margin: 0 auto;
-  background-color: $clr2;
-  color: $clr5;
+   margin: 0 auto;
+   transition: .1s;
+   // background-color: $clr2;
+   // background: rgb(46, 48, 67);
+   // background: white;
+   // background: linear-gradient(135deg, rgb(55, 57, 80) 0%, rgba(35, 38, 58, 1) 100%);
+
+   
+   // background: linear-gradient(152deg, rgba(28,31,54,0.8981952247191011) 0%, rgba(24,27,47,1) 83%);
+   // background: linear-gradient(152deg, rgba(28,31,54,0.9281952247191011) 0%, rgba(14,15,27,1) 83%);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 120vh;
+   
+   color: $clr6;
+   &.dark{
+      background: linear-gradient(152deg, rgba(28, 31, 54, 0.9208918539325842) 0%, rgba(28, 31, 54, 1) 83%);
+      color: $clr5;
+   }
+   
+   &.light{
+      background: linear-gradient(152deg, rgba(28, 31, 54, 0.9208918539325842) 0%, rgba(28, 31, 54, 1) 83%);
+      background: white;
+      background: rgb(28,31,54);
+background: linear-gradient(152deg, rgba(255, 255, 255, 0.128) 0%, rgba(204, 206, 226, 0.534) 83%); 
+      color: $clr6;
+   }
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+   color: inherit;
+   text-decoration: none;
 }

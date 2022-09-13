@@ -2,25 +2,31 @@
   <header class="gallery-header">
     <h2>Featured <span>projects.</span></h2>
   </header>
-  <section class="gallery-container">
+  <section class="gallery-body">
 
     <section class="gallery">
       <div class="portfolio">
         <gallery-item :project="projects[page]" />
 
         <div class="pagintaion">
-        <button @click="setPage(-1)"></button>
-        <div :class="[idx === page ? 'active' : '', 'page']" v-for="(project,idx) in projects" :key="idx"></div>
-        <button @click="setPage(1)"></button>
-      </div>
+          <button @click="setPage(-1)"></button>
+          <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
+          <button @click="setPage(1)"></button>
+        </div>
       </div>
       <div class="text">
-        <header>{{page === 0 ? 'trailo':'popCoin'}}</header>
+        <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Aliquam sit asperiores alias ipsam delectus molestiae
-          dolores, accusantium quibusdam natus in rerum illum
-          aspernatur commodi nisi cum minus eum, beatae rem.
+          Trailo is a trello clone, a project managment system for a 
+          solo or team. the application was developed during
+          a 10 days sprint , with a team of three.
+          Trailo embraces the power of sockets, for real time 
+          changes between users of the same board, has a node.js
+          backend and a TON of functionallity.
+          <br> adding boards, groups, and cards. label each card, 
+          create deadline , add members to each card, summmery
+          of all card with a dashboardand ofcourse, 
+          the iconic trello dragabillity.
         </p>
 
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -38,7 +44,7 @@
 
 
 
-      
+
     </section>
 
   </section>
@@ -52,8 +58,9 @@ export default {
   data() {
     return {
       projects: ['https://i.ibb.co/KFBbC84/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
-
       page: 0
+
+
     };
   },
   created() { },

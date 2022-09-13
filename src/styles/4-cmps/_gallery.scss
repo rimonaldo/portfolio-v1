@@ -1,8 +1,11 @@
+// HEADER
 .gallery-header {
    padding: 0 $layoutPadding;
-   margin-bottom: 2em;
+   margin-bottom: 3em;
+   // margin-inline-start: 12vw;
+   
+   text-align: center;
    @media only screen and (max-width: $break-narrow) {
-      text-align: center;
       font-size: 1.4em;
       margin-bottom: 3em;
    }
@@ -11,11 +14,9 @@
       color: $clr1;
    }
 }
-
-.gallery-container {
-   margin-top: 3em;
+// BODY
+.gallery-body {
    padding: 0 $layoutPadding;
-   // border: 1px black solid;
 
    header {
       font-size: 2.5em;
@@ -25,34 +26,24 @@
       }
    }
    .gallery {
-      > * {
-         // border: 1px red solid;
-      }
       display: flex;
       height: min(400px, 80vw);
       position: relative;
+      // right: 12vw;
       @media only screen and (max-width: $break-narrow) {
-         // flex-direction: column-reverse;
          flex-direction: column;
          height: 100vw;
       }
       .text {
-
          flex: 2;
          font-size: 18px;
          header {
-            // line-height: 2em;
             border-bottom: 1px gray solid;
-            // padding-bottom: .5em;
-            // margin-bottom: .5em;
          }
          p {
             margin-bottom: 1em;
             margin-bottom: 1em;
             font-size: 1em;
-            @media only screen and (max-width: $break-narrow) {
-               // text-align: center;
-            }
          }
 
          .tech {
@@ -63,13 +54,13 @@
       .portfolio {
          flex: 3;
          position: relative;
+       
          @media only screen and (max-width: $break-narrow) {
             flex: 2;
          }
       }
-
+      
       .pagintaion {
-         // border: 1px red solid;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -92,7 +83,7 @@
                content: '\f053';
             }
          }
-         .page {
+         .page-dot {
             width: 1em;
             height: 1em;
             border-radius: 50%;
@@ -110,7 +101,7 @@
          }
       }
    }
-
+   // ITEM
    .item {
       height: max(300px, 100%);
       transition: 0.3s;
@@ -119,17 +110,11 @@
       background-repeat: no-repeat;
       position: relative;
       bottom: 3.5em;
-      // right: 5vw;
-      @media only screen and (max-width: $break-narrow) {
-         right: 0vw;
-         // height: 300px;
-      }
+      // right: 5em;
       @media only screen and (max-width: 550px) {
-         // bottom: 5em;
          margin-bottom: 15em;
       }
       @media only screen and (max-width: 450px) {
-         // bottom: 5em;
          margin-bottom: 13em;
       }
    }
