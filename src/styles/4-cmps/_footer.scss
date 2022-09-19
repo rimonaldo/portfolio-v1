@@ -1,3 +1,53 @@
+
 .footer{
+    position: absolute;
+    padding:  $layoutPadding;
+    margin: 0 auto;
+    width: 99.1vw;
+    border: 1px black solid;
+    .logo{
+        margin-bottom: 2em;
+    }
+    .about{
+        @media only screen and (max-width: $break-small) {
+            flex-direction: column;
+            >*{
+                margin-block-end: 1em;
+                border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+            }
+            }
+        display: flex;
+        
+        justify-content: space-between;
+        >*{
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            >*{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        img{
+            height: 1em;
+            margin-inline-end: 5px;
+        }
+        .loc{
+            display: flex;
+           
+        }
+        ul{
+          
+            list-style: none;
+            li{
+                margin-block-end: 1em;
+            }
+        }
+    }
    
 }

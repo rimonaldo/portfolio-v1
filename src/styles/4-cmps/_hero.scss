@@ -1,10 +1,10 @@
-.home-page {
+.hero {
    padding: 0 $layoutPadding;
    font-size: 3rem;
    z-index: 0;
 
-   margin-bottom: 5vh;
-   .hero {
+   margin-bottom: 25vh;
+   .content-container {
       @media only screen and (max-width: 650px) {
          margin: 0 auto;
          width: 100%;
@@ -17,7 +17,7 @@
 
       p {
          font-size: em(7px);
-         color: rgb(104, 103, 103);
+         color: rgb(134, 132, 132);
          width: 60%;
          margin-bottom: 14px;
       }

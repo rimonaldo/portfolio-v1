@@ -3,29 +3,29 @@
     <h2>Featured <span>projects.</span></h2>
   </header>
   <section class="gallery-body">
-
+    <div class="pagintaion">
+      <button @click="setPage(-1)"></button>
+      <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
+      <button @click="setPage(1)"></button>
+    </div>
     <section class="gallery">
       <div class="portfolio">
         <gallery-item :project="projects[page]" />
 
-        <div class="pagintaion">
-          <button @click="setPage(-1)"></button>
-          <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
-          <button @click="setPage(1)"></button>
-        </div>
+
       </div>
       <div class="text">
         <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
         <p>
-          Trailo is a trello clone, a project managment system for a 
+          Trailo is a trello clone, a project managment system for a
           solo or team. the application was developed during
           a 10 days sprint , with a team of three.
-          Trailo embraces the power of sockets, for real time 
+          Trailo embraces the power of sockets, for real time
           changes between users of the same board, has a node.js
           backend and a TON of functionallity.
-          <br> adding boards, groups, and cards. label each card, 
+          <br> adding boards, groups, and cards. label each card,
           create deadline , add members to each card, summmery
-          of all card with a dashboardand ofcourse, 
+          of all card with a dashboardand ofcourse,
           the iconic trello dragabillity.
         </p>
 
@@ -35,10 +35,7 @@
 
         <div class="tech">
           <header>Tech used</header>
-          <div class="icons">
-            <tech-icons :iconsToShow="['vue','vuex','vuer','socket','node','mongodb','cookies']" />
-
-          </div>
+          <tech-icons :iconsToShow="['vue','vuex','vuer','socket','node','mongodb','cookies']" />
         </div>
       </div>
 
@@ -57,7 +54,7 @@ export default {
   components: { galleryItem, techIcons },
   data() {
     return {
-      projects: ['https://i.ibb.co/KFBbC84/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
+      projects: ['https://i.ibb.co/JrMxnKy/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
       page: 0
 
 

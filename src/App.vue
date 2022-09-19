@@ -3,9 +3,10 @@
     <div class="full">
       <app-header />
     </div>
-    <home-page />
-    <!-- <item-list /> -->
+    <app-hero />
     <gallery-list />
+    <app-action />  
+    <app-footer/>
   </section>
 </template>
 
@@ -13,15 +14,17 @@
 import appHeader from '@/cmps/header.vue'
 import appFooter from './cmps/app-footer.vue'
 import itemList from './cmps/item-list.vue'
-import homePage from './views/home-page.vue'
+import appHero from './cmps/hero.vue'
 import galleryList from './cmps/gallery-list.vue'
+import appAction from './cmps/app-action.vue'
 export default {
   components: {
     appHeader,
     itemList,
     appFooter,
-    homePage,
+    appHero,
     galleryList,
+    appAction,
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template>
-    <section class="home-page">
-        <div class="hero">
+    <section class="hero">
+        <div class="content-container">
             <div class="text-container">
                 <h1>Hello, i'm <br> a Front end Developer</h1>
                 <p>

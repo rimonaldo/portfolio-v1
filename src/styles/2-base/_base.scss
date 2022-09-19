@@ -21,6 +21,8 @@ html {
       list-style: none;
       text-decoration: none;
    }
+
+   
 }
 
 button {
@@ -37,30 +39,24 @@ ul {
 
 body {
    margin: 0 auto;
-   transition: .1s;
+   transition: 0.1s;
    // background-color: $clr2;
    // background: rgb(46, 48, 67);
    // background: white;
    // background: linear-gradient(135deg, rgb(55, 57, 80) 0%, rgba(35, 38, 58, 1) 100%);
 
-   
-   // background: linear-gradient(152deg, rgba(28,31,54,0.8981952247191011) 0%, rgba(24,27,47,1) 83%);
-   // background: linear-gradient(152deg, rgba(28,31,54,0.9281952247191011) 0%, rgba(14,15,27,1) 83%);
    background-repeat: no-repeat;
    background-size: cover;
-   height: 120vh;
-   
-   color: $clr6;
-   &.dark{
+   min-height: 210vh;
+   &.dark {
       background: linear-gradient(152deg, rgba(28, 31, 54, 0.9208918539325842) 0%, rgba(28, 31, 54, 1) 83%);
+      background: linear-gradient(152deg, rgba(28,31,54,0.9281952247191011) 0%, rgba(14,15,27,1) 83%);
       color: $clr5;
    }
-   
-   &.light{
-      background: linear-gradient(152deg, rgba(28, 31, 54, 0.9208918539325842) 0%, rgba(28, 31, 54, 1) 83%);
+
+   &.light {
       background: white;
-      background: rgb(28,31,54);
-background: linear-gradient(152deg, rgba(255, 255, 255, 0.128) 0%, rgba(204, 206, 226, 0.534) 83%); 
+      background: linear-gradient(152deg, rgba(255, 255, 255, 0.128) 0%, rgba(204, 206, 226, 0.534) 83%);
       color: $clr6;
    }
 }

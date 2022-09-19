@@ -1,13 +1,15 @@
 // HEADER
 .gallery-header {
-   padding: 0 $layoutPadding;
-   margin-bottom: 3em;
+   padding: 1em $layoutPadding;
+   // margin-bottom: 5em;
    // margin-inline-start: 12vw;
-   
+   line-height: 5em;
    text-align: center;
    @media only screen and (max-width: $break-narrow) {
+      line-height: 1.5em;
       font-size: 1.4em;
-      margin-bottom: 3em;
+      margin-bottom: 2em;
+      // border-bottom: 1px $clr7 solid;
    }
    font-size: 2.5em;
    span {
@@ -15,38 +17,52 @@
    }
 }
 // BODY
-.gallery-body {
-   padding: 0 $layoutPadding;
 
+.gallery-body {
+   position: relative;
+   padding: 0 $layoutPadding;
+   // min-height: 1000px;
    header {
       font-size: 2.5em;
-      @media only screen and (max-width: $break-narrow) {
+      @media only screen and (max-width: $break-small) {
          text-align: center;
          font-size: 1.4em;
       }
+      @media only screen and (max-width: 550px) {
+         margin-top: 0.5em;
+      }
    }
    .gallery {
+      > * {
+         // border: 1px red solid;
+      }
       display: flex;
-      height: min(400px, 80vw);
+      height: min(550px, 80vw);
       position: relative;
-      // right: 12vw;
-      @media only screen and (max-width: $break-narrow) {
+      @media only screen and (max-width: $break-normal) {
          flex-direction: column;
          height: 100vw;
       }
       .text {
          flex: 2;
          font-size: 18px;
+
+         @media only screen and (max-width: $break-normal) {
+            position: relative;
+            bottom: 5em;
+         }
+         @media only screen and (max-width: $break-narrow) {
+            bottom: 0em;
+         }
          header {
-            border-bottom: 1px gray solid;
+            border-bottom: 1px rgba(128, 128, 128, 0.281) solid;
+            line-height: 1.5em;
          }
          p {
-            margin-bottom: 1em;
+            margin-top: 1em;
             margin-bottom: 1em;
             font-size: 1em;
-         }
-
-         .tech {
+            line-height: 1.3em;
          }
       }
 
@@ -54,68 +70,70 @@
       .portfolio {
          flex: 3;
          position: relative;
-       
+         // ITEM
+         height: max(400px, 100%);
+         .item {
+            // border: 1px black solid;
+            height: 100%;
+            transition: 0.3s;
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+            position: relative;
+            // bottom: 3.5em;
+            z-index: -1;
+            @media only screen and (max-width: 650px) {
+               margin-bottom: 15em;
+            }
+            @media only screen and (max-width: 450px) {
+               margin-bottom: 13em;
+            }
+         }
          @media only screen and (max-width: $break-narrow) {
-            flex: 2;
-         }
-      }
-      
-      .pagintaion {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         position: absolute;
-         margin-left: auto;
-         margin-right: auto;
-         left: 0;
-         right: 0;
-         text-align: center;
-         bottom: 0em;
-         @media only screen and (max-width: $break-narrow) {
-            bottom: 1.5em;
-         }
-         button {
-            font-family: fa-solid;
-            padding: 0 0.5em;
-         }
-         :nth-child(1) {
-            &::before {
-               content: '\f053';
-            }
-         }
-         .page-dot {
-            width: 1em;
-            height: 1em;
-            border-radius: 50%;
-            margin: 0 1em;
-            background-color: white;
-            transition: 0.5s;
-            &.active {
-               background-color: $clr1;
-            }
-         }
-         :last-child {
-            &::before {
-               content: '\f054';
-            }
+            // flex: 2;
          }
       }
    }
-   // ITEM
-   .item {
-      height: max(300px, 100%);
-      transition: 0.3s;
-      background-size: contain;
-      background-position: top;
-      background-repeat: no-repeat;
-      position: relative;
-      bottom: 3.5em;
-      // right: 5em;
-      @media only screen and (max-width: 550px) {
-         margin-bottom: 15em;
+}
+
+.pagintaion {
+   // border: 1px green solid;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+   text-align: center;
+   top: -3.5em;
+   position: absolute;
+   @media only screen and (max-width: $break-narrow) {
+      top: -2em;
+   }
+   button {
+      font-family: fa-solid;
+      padding: 0 0.5em;
+   }
+   :nth-child(1) {
+      &::before {
+         content: '\f053';
       }
-      @media only screen and (max-width: 450px) {
-         margin-bottom: 13em;
+   }
+   .page-dot {
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      margin: 0 1em;
+      background-color: white;
+      transition: 0.5s;
+      &.active {
+         background-color: $clr1;
+      }
+   }
+   :last-child {
+      &::before {
+         content: '\f054';
       }
    }
 }
