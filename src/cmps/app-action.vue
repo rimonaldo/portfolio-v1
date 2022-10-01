@@ -2,14 +2,16 @@
   <div class="call-to-action">
 
     <h2>Lets wrok together!</h2>
-    <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions,
-      our support team would be happy to help you.</p>
+    <p>If you think i can fit in your team, ill be honored to have you invest another minute of your time. <br> Send me a message by filling your email: <br> </p>
 
     <form ref="form" @submit.prevent="sendEmail">
-      <input type="email" name="user_email" placeholder="email@example.com">
-      <button type="submit" class=" main-btn">Get Started For Free</button>
+      <div class="top">
+        <input v-model="mail" type="email" ref="msg"  placeholder="email@example.com">
+        <button type="submit" class=" main-btn">Say Hello!</button>
+      </div>
+      <textarea name="message" id="" cols="30" rows="3" v-model="showMail" ></textarea>
     </form>
-
+    
   </div>
 </template>
 <script>
@@ -18,7 +20,10 @@ export default {
   name: 'ProjectApp',
   components: {},
   data() {
-    return {};
+    return {
+      mail:'',
+      msg:` ${this.showMail}`
+    };
   },
   created() { },
   methods: {
@@ -31,7 +36,11 @@ export default {
         });
     }
   },
-  computed: {},
+  computed: {
+    showMail(){
+      return `Hello Rimon! we might have a job offer for you! we contacted you through: ${this.mail||''}`
+    }
+  },
   unmounted() { },
 };
 </script>

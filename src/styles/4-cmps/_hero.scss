@@ -1,25 +1,82 @@
 .hero {
-   padding: 0 $layoutPadding;
-   font-size: 3rem;
+   filter: blur(0px);
+   font-size: 4rem;
    z-index: 0;
+   display: flex;
+   align-items: center;
+   padding: 0 $normalPadding;
+   margin-bottom: 9vh;
+   @media only screen and (max-width: $break-normal) {
+      padding: 0 $smallPadding;
+      margin-bottom: 3vh;
+   }
 
-   margin-bottom: 25vh;
+   > * {
+      flex: 1;
+   }
+
+   @media only screen and (max-width: $break-mobile) {
+      flex-direction: column-reverse;
+      gap: 30px;
+   }
    .content-container {
-      @media only screen and (max-width: 650px) {
-         margin: 0 auto;
+      flex:3;
+      span {
+         color: $clr1;
+      }
+      @media only screen and (max-width: $break-hero) {
          width: 100%;
          font-size: 1.7rem;
+         margin: 0 auto;
+         // margin-bottom: 5px;
       }
       h1 {
+         margin: 0 auto;
          font-size: 1em;
          margin-bottom: 10px;
       }
 
       p {
-         font-size: em(7px);
-         color: rgb(134, 132, 132);
-         width: 60%;
+         font-size: .3em;
+         // color: rgb(209, 209, 209);
+         width: 80%;
          margin-bottom: 14px;
+         line-height: 1.2em;
+         @media only screen and (max-width: $break-hero) {
+            font-size: .5em;
+         }
+        
+         button {
+            line-height: 1em;
+            padding: 5px;
+         }
+      }
+   }
+
+   .profile-container {
+      z-index: -1;
+      min-width: max(200px, 15vw );
+      display: inline-block;
+      position: relative;
+      height: 50%;
+      @media only screen and (max-width: $break-hero) {
+         margin: 0 auto;
+      }
+      .dummy {
+         margin-top: 100%;
+      }
+      .element {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: silver; 
+         border-radius: 50%;
+         background-image: url('https://i.ibb.co/bg6HVMM/image.png');
+         background-position: center;
+         background-size: 87.5%;
+         background-repeat: no-repeat;
       }
    }
 }

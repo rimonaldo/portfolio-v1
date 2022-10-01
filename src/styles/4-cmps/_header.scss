@@ -1,11 +1,18 @@
 .main-header {
    // LAYOUT
+   font-size: 20px;
    position: relative;
    background-color: $clr6;
-   padding: 0 $layoutPadding;
+   padding: 0 $normalPadding;
+   @media only screen and (max-width: $break-normal) {
+      padding: 0 $smallPadding;
+   }
    align-items: center;
    line-height: 3rem;
-   margin-bottom: 5vh;
+   margin-bottom: 8vw;
+   @media only screen and (max-width: $break-normal) {
+      margin-bottom: $smallPadding;
+   }
    // NAV LIST
    .content {
       display: flex;
@@ -18,7 +25,7 @@
          display: flex;
          justify-content: space-between;
          color: $clr5;
-         @media only screen and (max-width: $break-small) {
+         @media only screen and (max-width: $break-mobile) {
             flex-direction: column;
             position: absolute;
             top: $headerHeight;
@@ -38,7 +45,7 @@
             margin-inline-start: 55px;
             justify-content: center;
             cursor: pointer;
-            @media only screen and (max-width: $break-small) {
+            @media only screen and (max-width: $break-mobile) {
                width: 100vw;
                margin: 0;
                line-height: 5rem;
@@ -51,7 +58,7 @@
 
       .burger {
          display: none;
-         @media only screen and (max-width: $break-small) {
+         @media only screen and (max-width: $break-mobile) {
             display: block;
          }
          cursor: pointer;

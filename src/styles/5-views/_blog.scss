@@ -1,0 +1,15 @@
+.blog-page{
+    padding: 0 $layoutPadding;
+    h1{
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    li{
+        color: rgb(231, 231, 231);
+        border-bottom: 1px rgba(0, 0, 0, 0.425) solid;
+        width: max-content;
+        line-height: 1.5em;
+        margin-bottom: 2em;
+    }
+}

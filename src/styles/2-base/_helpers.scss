@@ -86,3 +86,11 @@
 .ratio-poster {
   @include aspect-ratio(100, 150);
 }
+
+.layout{
+  padding: 0 $layoutPadding;
+}
+
+.rtl{
+  text-align: right;
+}

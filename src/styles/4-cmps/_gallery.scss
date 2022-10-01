@@ -3,28 +3,30 @@
    padding: 1em $layoutPadding;
    // margin-bottom: 5em;
    // margin-inline-start: 12vw;
-   line-height: 5em;
+   line-height: 4em;
    text-align: center;
+   margin-bottom: .5em;
    @media only screen and (max-width: $break-narrow) {
       line-height: 1.5em;
       font-size: 1.4em;
       margin-bottom: 2em;
       // border-bottom: 1px $clr7 solid;
    }
-   font-size: 2.5em;
+   font-size: min(3em,4vw);
    span {
       color: $clr1;
    }
 }
-// BODY
 
+// BODY
 .gallery-body {
+   filter: blur(0px);
    position: relative;
    padding: 0 $layoutPadding;
    // min-height: 1000px;
    header {
       font-size: 2.5em;
-      @media only screen and (max-width: $break-small) {
+      @media only screen and (max-width: $break-mobile) {
          text-align: center;
          font-size: 1.4em;
       }
@@ -37,11 +39,14 @@
          // border: 1px red solid;
       }
       display: flex;
+      gap: 150px;
+
       height: min(550px, 80vw);
       position: relative;
       @media only screen and (max-width: $break-normal) {
          flex-direction: column;
          height: 100vw;
+         gap: 0;
       }
       .text {
          flex: 2;
@@ -53,6 +58,9 @@
          }
          @media only screen and (max-width: $break-narrow) {
             bottom: 0em;
+         }
+         @media only screen and (max-width: 400px) {
+            bottom: 2em;
          }
          header {
             border-bottom: 1px rgba(128, 128, 128, 0.281) solid;
@@ -106,14 +114,16 @@
    left: 0;
    right: 0;
    text-align: center;
-   top: -3.5em;
+   top: -1.5em;
    position: absolute;
+   font-size: 2.5rem;
    @media only screen and (max-width: $break-narrow) {
       top: -2em;
    }
    button {
       font-family: fa-solid;
       padding: 0 0.5em;
+      font-size: 1em;
    }
    :nth-child(1) {
       &::before {
