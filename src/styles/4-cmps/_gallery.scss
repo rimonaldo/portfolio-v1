@@ -10,6 +10,13 @@
          font-size: 1.4em;
          // margin-bottom: 6em;
       }
+
+      @media only screen and (max-width: 400px) {
+         line-height: 1.5em;
+         font-size: 1.4em;
+         position: relative;
+         bottom: 1em;
+      }
       @media only screen and (max-width: $break-laptop) {
          margin-bottom: 2em;
       }
@@ -82,11 +89,11 @@
                width: 90%;
             }
             @media only screen and (max-width: $break-mobile) {
-               height: 10em;
+               height: max-content;
                width: 100%;
             }
             @media only screen and (max-width: 560px) {
-               height: 15em;
+               height: max-content;
             }
          }
       }

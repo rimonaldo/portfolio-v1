@@ -14,7 +14,7 @@
 
 .call-to-action {
    @media only screen and (max-width: $break-mobile) {
-      font-size: 14px;
+      font-size: 12px;
    }
  
    color: white;
@@ -49,18 +49,27 @@
             border: none;
             // margin-inline-end: 15vw;
             &::placeholder {
+              
                font-size: 12px;
                color: rgb(177, 176, 176);
                position: relative;
                bottom: 2px;
             }
+
+           
          }
+
+       
 
          .marked-input{
             color: $clr1;
          }
       }
-
+      textarea{
+         @media only screen and (max-width: $break-mobile) {
+            font-size: 10px;
+         }
+      }
       button {
          @media only screen and (max-width: $break-mobile) {
             font-size: .8em;
