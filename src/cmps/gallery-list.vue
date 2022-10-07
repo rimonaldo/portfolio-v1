@@ -8,6 +8,11 @@
       <gallery-item :project="projects[page]" />
 
       <div class="text">
+        <div class="pagintaion">
+          <button @click="setPage(-1)"></button>
+          <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
+          <button @click="setPage(1)"></button>
+        </div>
         <div class="script">
           <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
           <div v-html="script[page]"></div>
