@@ -2,6 +2,7 @@
    // HEADER
    height: max-content;
    max-width: 100%;
+   position: relative;
    .gallery-header {
       padding: 0 $layoutPadding;
       text-align: center;
@@ -130,8 +131,15 @@
          // top: -2em;
          position: static;
       }
+      @media only screen and (max-width: 400px) {
+         // top: -2em;
+         position: absolute;
+         top: -2.3em;
+         left: 0;
+         right: 0;
+      }
       @media only screen and (max-width: $break-tablet) {
-         top: -2em;
+         // top: -2em;
       }
       button {
          font-family: fa-solid;
