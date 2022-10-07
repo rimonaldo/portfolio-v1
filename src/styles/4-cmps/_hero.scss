@@ -5,19 +5,22 @@
    display: flex;
    align-items: center;
    padding: 0 $normalPadding;
-   margin-bottom: 9vh;
-   @media only screen and (max-width: $break-normal) {
+   margin-bottom: 35vh;
+   @media only screen and (max-width: $break-laptop) {
       padding: 0 $smallPadding;
-      margin-bottom: 3vh;
+      // margin-bottom: 15vh;
    }
 
    > * {
       flex: 1;
    }
 
+
    @media only screen and (max-width: $break-mobile) {
+      flex-direction: column;
       flex-direction: column-reverse;
       gap: 30px;
+      margin-bottom: 25vh;
    }
    .content-container {
       flex:3;
@@ -28,24 +31,36 @@
          width: 100%;
          font-size: 1.7rem;
          margin: 0 auto;
-         // margin-bottom: 5px;
+         flex:3;
       }
       h1 {
          margin: 0 auto;
          font-size: 1em;
          margin-bottom: 10px;
+         @media only screen and (max-width: $break-hero) {
+            font-size: 1.2em;
+         }
       }
 
       p {
-         font-size: .3em;
+
+         
+         font-size: max(1.25vw,14px);
          // color: rgb(209, 209, 209);
-         width: 80%;
+         // width: 80%;
          margin-bottom: 14px;
          line-height: 1.2em;
-         @media only screen and (max-width: $break-hero) {
-            font-size: .5em;
+         @media only screen and (max-width: $break-laptop) {
+            font-size: max(1.8vw,14px);
          }
-        
+         @media only screen and (max-width: $break-hero) {
+            font-size: max(2.2vw,10px);
+            width: 100%;
+         }
+         
+         @media only screen and (max-width: 400px) {
+            width: 100%;
+         }
          button {
             line-height: 1em;
             padding: 5px;
@@ -55,10 +70,13 @@
 
    .profile-container {
       z-index: -1;
-      min-width: max(200px, 15vw );
+      min-width: max(150px, 15vw );
+
+      // width: 50px;
       display: inline-block;
       position: relative;
-      height: 50%;
+      // height: 50%;
+      // display: none;
       @media only screen and (max-width: $break-hero) {
          margin: 0 auto;
       }

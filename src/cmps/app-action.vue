@@ -1,17 +1,23 @@
 <template>
-  <div class="call-to-action">
+  <div class="action-container">
+    <div class="call-to-action">
 
-    <h2>Lets wrok together!</h2>
-    <p>If you think i can fit in your team, ill be honored to have you invest another minute of your time. <br> Send me a message by filling your email: <br> </p>
+      <h2>Let’s work together!</h2>
+      <p>If you are interested in getting to know more about me, and think I would be a good fit for your team, I would
+        appreciate hearing from you!
+        <br>
+      </p>
 
-    <form ref="form" @submit.prevent="sendEmail">
-      <div class="top">
-        <input v-model="mail" type="email" ref="msg"  placeholder="email@example.com">
-        <button type="submit" class=" main-btn">Say Hello!</button>
-      </div>
-      <textarea name="message" id="" cols="30" rows="3" v-model="showMail" ></textarea>
-    </form>
-    
+      <form ref="form" @submit.prevent="sendEmail">
+        <div class="top">
+          <input v-model="mail" type="email" ref="msg" placeholder="email@example.com">
+          <button type="submit" class=" main-btn">Say Hello!</button>
+        </div>
+
+        <textarea name="message" id="" cols="30" rows="3" v-model="showMail"></textarea>
+      </form>
+
+    </div>
   </div>
 </template>
 <script>
@@ -21,8 +27,8 @@ export default {
   components: {},
   data() {
     return {
-      mail:'',
-      msg:` ${this.showMail}`
+      mail: '',
+      msg: ` ${this.showMail}`
     };
   },
   created() { },
@@ -37,8 +43,8 @@ export default {
     }
   },
   computed: {
-    showMail(){
-      return `Hello Rimon! we might have a job offer for you! we contacted you through: ${this.mail||''}`
+    showMail() {
+      return `Hello Rimon, I'm interested in talking to you. I contacted you through: ${this.mail || ''}`
     }
   },
   unmounted() { },

@@ -21,20 +21,16 @@ html {
       list-style: none;
       text-decoration: none;
    }
-   height: 200vh;
-   
-   
    background: rgba(14,15,27,.6);
    &.light{
       background: rgb(255, 255, 255, .1);
    }
-}
+   &.screen{
 
-#app {
-
-   .hero{
    }
 }
+
+
 
 button {
    border: none;
@@ -51,19 +47,11 @@ ul {
 body {
    margin: 0 auto;
    transition: 0.1s;
-   // background-color: $clr2;
-   // background: rgb(46, 48, 67);
-   // background: white;
-   // background: linear-gradient(135deg, rgb(55, 57, 80) 0%, rgba(35, 38, 58, 1) 100%);
-   position: relative;
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 100%;
 
    &.dark {
-
-      
-      // background: rgba(14, 15, 27, 1);
       color: $clr5;
       $bg-color:$clr2;
       $g: transparent;
@@ -74,16 +62,12 @@ body {
       }
       $g: append($g, $bg-color);
       background: linear-gradient(152deg, rgba(28, 31, 54, 0.8) 0%, rgba(14, 15, 27, 1) 85%);
-      // background: linear-gradient(to top left, $g,rgba(28, 31, 54, 0.8));
-
    }
 
    &.light {
       background: white;
       background: linear-gradient(152deg, rgba(255, 255, 255, 0.1) 0%, rgba(204, 206, 226, .6) 83%);
       color: $clr6;
-
-    
    }
 }
 

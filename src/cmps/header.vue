@@ -18,7 +18,7 @@
           <li>Home</li>
         </router-link>
         <li>Gallery</li>
-        <li>Contact</li>
+        <li class="c">Contact</li>
       </ul>
       
 

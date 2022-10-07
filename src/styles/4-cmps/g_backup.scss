@@ -1,0 +1,164 @@
+.gallery-container {
+   // HEADER
+   border: 1px red solid;
+   .gallery-header {
+      padding: 0 $layoutPadding;
+      // line-height: 4em;
+      text-align: center;
+      margin-bottom: $margin-normal;
+      @media only screen and (max-width: $break-tablet) {
+         line-height: 1.5em;
+         font-size: 1.4em;
+         margin-bottom: 2em;
+      }
+      font-size: min(3em, 4vw);
+      span {
+         color: $clr1;
+      }
+   }
+
+   // BODY
+   .gallery-body {
+      padding: 0 5em;
+      filter: blur(0px);
+      @media only screen and (max-width: $break-tablet) {
+         padding: 0 $layoutPadding;
+      }
+
+      header {
+         font-size: 2.5em;
+         @media only screen and (max-width: $break-mobile) {
+            text-align: center;
+            font-size: 1.4em;
+         }
+
+         @media only screen and (max-width: 550px) {
+            margin-top: 0.5em;
+         }
+      }
+
+      .content {
+         display: flex;
+         justify-content: space-between;
+         gap: 50px;
+
+         @media only screen and (max-width: $break-laptop) {
+            flex-direction: column;
+            height: 80vh;
+            gap: 0;
+
+            .portfolio {
+               // width: 90%;
+               margin: 0 auto;
+            }
+         }
+
+         @media only screen and (max-width: 400px) {
+            height: 90vh;
+         }
+         @media only screen and (max-width: $break-mobile) {
+            // height: 190vw;
+         }
+         .text {
+            flex: 1;
+            font-size: 18px;
+            top: 3em;
+            header {
+               border-bottom: 1px rgba(128, 128, 128, 0.281) solid;
+               line-height: 1.5em;
+            }
+            p {
+               margin-top: 1em;
+               margin-bottom: 1em;
+               font-size: 1em;
+               line-height: 1.3em;
+
+               @media only screen and (max-width: $break-mobile) {
+                  // font-size: 14px;
+               }
+               // white-space: nowrap;
+               // overflow: hidden;
+               // text-overflow: ellipsis;
+               @media only screen and (max-width: 400px) {
+                  font-size: 14px;
+               }
+            }
+         }
+
+         // PORTFOLIO
+         .mockup-container {
+            flex: 3;
+
+            // @media only screen and (max-width: $break-laptop) {
+            //    flex: 1;
+            // }
+            // @media only screen and (max-width: $break-tablet) {
+            //    flex: 3;
+            // }
+
+            // @media only screen and (max-width: $break-mobile) {
+            //    flex: 15;
+            // }
+            .mockup-img {
+               height: 100%;
+               transition: 0.3s;
+               background-size: contain;
+               background-position: top;
+               background-repeat: no-repeat;
+               z-index: -1;
+               // @media only screen and (max-width: 650px) {
+               //    margin-bottom: 15em;
+               // }
+               // @media only screen and (max-width: 450px) {
+               //    margin-bottom: 13em;
+               // }
+            }
+         }
+      }
+   }
+
+   .pagintaion {
+      margin-top: $margin-normal;
+      // border: 1px green solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: -1.5em;
+      // position: absolute;
+      font-size: 2.5rem;
+      @media only screen and (max-width: $break-tablet) {
+         top: -2em;
+      }
+      button {
+         font-family: fa-solid;
+         // padding: 0 0.5em;
+         font-size: 1em;
+      }
+      :nth-child(1) {
+         &::before {
+            content: '\f053';
+         }
+      }
+      :last-child {
+         &::before {
+            content: '\f054';
+         }
+      }
+      .page-dot {
+         width: 25px;
+         height: 25px;
+         border-radius: 50%;
+         margin: 0 1em;
+         background-color: white;
+         transition: 0.5s;
+         &.active {
+            background-color: $clr1;
+         }
+      }
+   }
+}

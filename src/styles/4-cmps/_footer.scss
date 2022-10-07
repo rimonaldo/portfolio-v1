@@ -1,61 +1,60 @@
-.footer {
-   padding: 5em $layoutPadding 0;
-   border-top: 1px $clr2 solid;
+.footer-container {
+   margin: 0 auto;
+   width: 100vw;
 
-   .logo {
-      margin-bottom: 2em;
-   }
-
-   .about {
+   margin-top: 380px;
+   position: relative;
+   .footer {
+      padding: 5em $layoutPadding 0;
+      border-top: 1px $clr2 solid;
       @media only screen and (max-width: $break-mobile) {
-         flex-direction: column;
-         > * {
-            margin-block-end: 1em;
-            border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+         padding: 5em $smallPadding 0;
+      }
+      .about {
+         @media only screen and (max-width: $break-mobile) {
+            flex-direction: column;
+            > * {
+               margin-block-end: 1em;
+               border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+            }
          }
-      }
-      display: flex;
-      justify-content: space-between;
-
-      > * {
-         flex: 1;
-      }
-
-      .contact {
          display: flex;
-         flex-direction: column;
-         justify-content: center;
+         justify-content: space-between;
+   
          > * {
-            display: flex;
-            // justify-content: center;
+            flex: 1;
          }
-      }
-      img {
-         height: 1em;
-         margin-inline-end: min(5vw, 10px);
-      }
-      .loc {
-         display: flex;
-      }
-      ul {
-         list-style: none;
-         padding: 0;
-         li {
+         
+         .contact {
             display: flex;
-            // border: 1px black solid;
-            margin-block-end: 1em;
-            justify-content: flex-start;
-            img {
-               //    margin-inline-end: 2vw;
+            font-size: 12px;
+            justify-content: space-between;
+            > * {
+               display: flex;
+            }
+         }
+         img {
+            height: 1em;
+            margin-inline-end: min(5vw, 10px);
+         }
+         .loc {
+            display: flex;
+         }
+         ul {
+            list-style: none;
+            padding: 0;
+            li {
+               display: flex;
+               margin-block-end: 1em;
+               justify-content: flex-start;
             }
          }
       }
    }
+   
 }
 
-.footer-container {
-   position: absolute;
-   bottom: 0;
-   margin: 0 auto;
-   width: 100vw;
+
+.body{
+   // border: 5px red solid;
 }

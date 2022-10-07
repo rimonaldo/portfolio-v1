@@ -2,15 +2,15 @@
     <section class="hero">
         <div class="content-container">
             <div class="text-container">
-                <h1>Hello! i'm <span>Rimon</span></h1>
+                <h1>Hello! I'm <span>Rimon</span></h1>
                 <p>
-                    Fullstack \ front-end developer with a passion <br> for learning and making new things.
-                    I am a team player <br> who enjoys solving problems on my own or with others as a group. <br>
-                    I love writing semantic, meaningfull and beutifull code that people can use and <span>enjoy the
-                    experience.</span>
+                    Full Stack/Front End developer with a <span>passion</span> <br>
+                    for learning and creating new things. I
+                    enjoy <span>challenges,</span> <br> and solving problems on my own and with a team. I love writing semantic, <br>
+                    logical, and meaningful code that allows users to <span>enjoy the experience.</span>
                 </p>
             </div>
-            
+
             <button class="main-btn">Lets team up!</button>
         </div>
 

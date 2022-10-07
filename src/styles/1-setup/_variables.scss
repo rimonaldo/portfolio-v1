@@ -8,18 +8,18 @@ $clr6: #212336;
 $clr7: #ff4a562d;
 // LAYOUT
 $layoutPadding: min(10vw, 400px);
-$normalPadding: 20vw;
-$smallPadding: 10vw;
+$normalPadding: 15vw;
+$smallPadding: 7.5vw;
 $headerHeight: 9vh;
+$layoutWide: 10em;
 
 // LAYOUT BREAKPOINTS
-$break-mobile: 720px;
-$break-narrow: 900px;
-$break-normal: 1360px;
-$break-wide: 1920px;
 $break-hero: 650px;
-// $padded-break-narrow: $break-narrow + $layoutPadding * 2;
-// $padded-break-normal: $break-normal + $layoutPadding * 2;
-// $padded-break-wide: $break-wide + $layoutPadding * 2;
+$break-mobile: 750px;
+$break-tablet: 900px;
+$break-laptop: 1360px;
+$break-wide: 1920px;
 
-//
+
+// MARGINS
+$margin-normal:min(50px,5vw);

@@ -7,12 +7,12 @@
 
         <div class="loc">
           <img src="../styles/images/icon-location.svg" alt="">
-          <p>Avilable to work in Tel-Aviv, Central Israel, and US relocation</p>
+          <p>Available  to work in Tel-Aviv, Central Israel, and US relocation</p>
         </div>
 
         <ul class="contact">
-          <li class="num"><img src="../styles/images/icon-phone.svg"> <span>+1-543-123-4567</span></li>
-          <li class="num"><img src="../styles/images/icon-email.svg"> <span>example@fylo.com</span></li>
+          <li class="num"><img src="../styles/images/icon-phone.svg"> <span>+972 53-531-0713</span></li>
+          <li class="num"><img src="../styles/images/icon-email.svg"> <span>rimonsade87@gmail.com</span></li>
         </ul>
         
       </div>

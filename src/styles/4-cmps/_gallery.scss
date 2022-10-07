@@ -1,67 +1,73 @@
-// HEADER
-.gallery-header {
-   padding: 1em $layoutPadding;
-   // margin-bottom: 5em;
-   // margin-inline-start: 12vw;
-   line-height: 4em;
-   text-align: center;
-   margin-bottom: .5em;
-   @media only screen and (max-width: $break-narrow) {
-      line-height: 1.5em;
-      font-size: 1.4em;
-      margin-bottom: 2em;
-      // border-bottom: 1px $clr7 solid;
-   }
-   font-size: min(3em,4vw);
-   span {
-      color: $clr1;
-   }
-}
-
-// BODY
-.gallery-body {
-   filter: blur(0px);
-   position: relative;
-   padding: 0 $layoutPadding;
-   // min-height: 1000px;
-   header {
-      font-size: 2.5em;
-      @media only screen and (max-width: $break-mobile) {
-         text-align: center;
+.gallery-container {
+   // HEADER
+   height: max-content;
+   max-width: 100%;
+   .gallery-header {
+      padding: 0 $layoutPadding;
+      text-align: center;
+      @media only screen and (max-width: $break-tablet) {
+         line-height: 6em;
          font-size: 1.4em;
+         // margin-bottom: 6em;
       }
-      @media only screen and (max-width: 550px) {
-         margin-top: 0.5em;
+      @media only screen and (max-width: $break-laptop) {
+         margin-bottom: 2em;
+      }
+      font-size: min(3em, 4vw);
+      span {
+         color: $clr1;
       }
    }
-   .gallery {
-      > * {
-         // border: 1px red solid;
-      }
+
+   // BODY
+   .gallery-body {
+      filter: blur(0px);
       display: flex;
-      gap: 150px;
-
-      height: min(550px, 80vw);
+      padding: 0 7.5em;
       position: relative;
-      @media only screen and (max-width: $break-normal) {
+      bottom: 6vh;
+      @media only screen and (max-width: $break-laptop) {
          flex-direction: column;
-         height: 100vw;
-         gap: 0;
+         padding: 0 $smallPadding;
       }
-      .text {
-         flex: 2;
-         font-size: 18px;
 
-         @media only screen and (max-width: $break-normal) {
-            position: relative;
-            bottom: 5em;
+      @media only screen and (max-width: $break-laptop) {
+         margin-bottom: 3vh;
+      }
+
+      @media only screen and (max-width: $break-tablet) {
+         padding: 0 $smallPadding;
+         font-size: 13px;
+      }
+      header {
+         font-size: 2.5em;
+         @media only screen and (max-width: $break-mobile) {
+            text-align: center;
+            font-size: 1.4em;
          }
-         @media only screen and (max-width: $break-narrow) {
-            bottom: 0em;
+
+         @media only screen and (max-width: 550px) {
+            margin-top: 0.5em;
          }
-         @media only screen and (max-width: 400px) {
-            bottom: 2em;
+      }
+
+      .text {
+         max-width: 600px;
+         @media only screen and (max-width: $break-laptop) {
+            max-width: max-content;
+            display: flex;
+            .script {
+               flex: 2;
+            }
+            .tech {
+               flex: 1;
+               
+            }
          }
+         @media only screen and (max-width: $break-mobile) {
+            flex-direction: column;
+         }
+         align-self: center;
          header {
             border-bottom: 1px rgba(128, 128, 128, 0.281) solid;
             line-height: 1.5em;
@@ -69,81 +75,82 @@
          p {
             margin-top: 1em;
             margin-bottom: 1em;
-            font-size: 1em;
             line-height: 1.3em;
+            height: 12em;
+            @media only screen and (max-width: $break-laptop) {
+               height: 8em;
+               width: 90%;
+            }
+            @media only screen and (max-width: $break-mobile) {
+               height: 10em;
+               width: 100%;
+            }
+            @media only screen and (max-width: 560px) {
+               height: 15em;
+            }
          }
       }
 
       // PORTFOLIO
-      .portfolio {
-         flex: 3;
-         position: relative;
-         // ITEM
-         height: max(400px, 100%);
-         .item {
-            // border: 1px black solid;
-            height: 100%;
-            transition: 0.3s;
-            background-size: contain;
-            background-position: top;
-            background-repeat: no-repeat;
-            position: relative;
-            // bottom: 3.5em;
-            z-index: -1;
-            @media only screen and (max-width: 650px) {
-               margin-bottom: 15em;
-            }
-            @media only screen and (max-width: 450px) {
-               margin-bottom: 13em;
-            }
-         }
-         @media only screen and (max-width: $break-narrow) {
-            // flex: 2;
-         }
-      }
-   }
-}
 
-.pagintaion {
-   // border: 1px green solid;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-left: auto;
-   margin-right: auto;
-   left: 0;
-   right: 0;
-   text-align: center;
-   top: -1.5em;
-   position: absolute;
-   font-size: 2.5rem;
-   @media only screen and (max-width: $break-narrow) {
-      top: -2em;
-   }
-   button {
-      font-family: fa-solid;
-      padding: 0 0.5em;
-      font-size: 1em;
-   }
-   :nth-child(1) {
-      &::before {
-         content: '\f053';
+      .mockup-img {
+         width: 200%;
+         height: 45vw;
+         margin-inline-end: 30px;
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         @media only screen and (max-width: 1700px) {
+            width: 300%;
+         }
+         @media only screen and (max-width: $break-laptop) {
+            width: 100%;
+            margin: 0 auto 4em;
+         }
       }
    }
-   .page-dot {
-      width: 1em;
-      height: 1em;
-      border-radius: 50%;
-      margin: 0 1em;
-      background-color: white;
-      transition: 0.5s;
-      &.active {
-         background-color: $clr1;
+
+   .pagintaion {
+      padding-bottom: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      bottom: 2em;
+      font-size: 2.5rem;
+      // display: none;
+      @media only screen and (max-width: $break-laptop) {
+         // top: -2em;
+         position: static;
       }
-   }
-   :last-child {
-      &::before {
-         content: '\f054';
+      @media only screen and (max-width: $break-tablet) {
+         top: -2em;
+      }
+      button {
+         font-family: fa-solid;
+         // padding: 0 0.5em;
+         font-size: 1em;
+      }
+      :nth-child(1) {
+         &::before {
+            content: '\f053';
+         }
+      }
+      :last-child {
+         &::before {
+            content: '\f054';
+         }
+      }
+      .page-dot {
+         width: 25px;
+         height: 25px;
+         border-radius: 50%;
+         margin: 0 1em;
+         background-color: white;
+         transition: 0.5s;
+         &.active {
+            background-color: $clr1;
+         }
       }
    }
 }

@@ -1,39 +1,31 @@
 <template>
-  <header class="gallery-header">
-    <h2>Featured <span>projects.</span></h2>
-  </header>
-  <section class="gallery-body">
+  <section class="gallery-container">
+    <header class="gallery-header">
+      <h2>Featured <span>Projects.</span></h2>
+    </header>
+    <section class="gallery-body">
 
-    <section class="gallery">
+      <gallery-item :project="projects[page]" />
 
-      <div class="pagintaion">
-      <button @click="setPage(-1)"></button>
-      <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
-      <button @click="setPage(1)"></button>
-    </div>
-    
-      <div class="portfolio">
-        <gallery-item :project="projects[page]" />
-
-
-      </div>
       <div class="text">
-        <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
-       
-        <div v-html="script[page]"></div>
-
-
+        <div class="script">
+          <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
+          <div v-html="script[page]"></div>
+        </div>
         <div class="tech">
           <header>Tech used</header>
           <tech-icons :iconsToShow="['vue','vuex','vuer','socket','node','mongodb','cookies']" />
         </div>
+
       </div>
-
-
-
 
     </section>
 
+    <div class="pagintaion">
+      <button @click="setPage(-1)"></button>
+      <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
+      <button @click="setPage(1)"></button>
+    </div>
   </section>
 </template>
 <script>
@@ -45,22 +37,25 @@ export default {
   data() {
     return {
       projects: ['https://i.ibb.co/JrMxnKy/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
-      page: 0,
-      script: [`<p> Trailo is a trello clone, a project managment system for a
-          solo or team. the application was developed during
-          a 10 days sprint , with a team of three.
-          Trailo embraces the power of sockets, for real time
-          changes between users of the same board, has a node.js
-          backend and a TON of functionallity.
-          <br> adding boards, groups, and cards. label each card,
-          create deadline , add members to each card, summmery
-          of all card with a dashboardand ofcourse,
-          the iconic trello dragabillity.</p>`,
+      page: 1,
+      script: [`<p> Trailo, which is a Trello clone, is a project management
+         system for individuals or teams. This application was developed
+          during a ten day sprint, by a team of three. Trailo embraces the 
+          power of sockets, for real time changes between users of the same
+          board. Trailo was developed with a node.js backend and a wealth
+          of functionality, which includes the ability to add boards,
+          groups, and cards, label cards, create deadlines, add members
+          to each card and display a summary of all cards on a dashboard,
+          all while encompassing the  iconic Trello draggability.  </p>`,
 
-        `<p>popCoin is a blockchain token demo app, that lets you manage your contacts, recive and transfer tokens, and mine transactions.
-          the token logic was made a a class with methods, to keep all its logic incapsulated. the key concepts that were implemented are inspired by popular cryptocurrencies as Ether and Bitcoin.
+        `<p>
+          popCoin
+          popCoin is a blockchain token demo app that is designed to let you manage your contacts, receive and transfer tokens, and mine transactions. 
+          The token logic was developed as a class with methods, to keep all of its logic encapsulated. 
+          The key concepts that I implemented include blockchain structure, transactions,
+           and mining, and were inspired by popular cryptocurrencies, including Ether and Bitcoin. 
           <br>
-          read a blog post about this topic here</p>
+          Read a blog post about my journey developing popCoin here! </p>
           `
       ]
 

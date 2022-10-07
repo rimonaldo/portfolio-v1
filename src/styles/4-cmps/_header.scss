@@ -4,13 +4,14 @@
    position: relative;
    background-color: $clr6;
    padding: 0 $normalPadding;
-   @media only screen and (max-width: $break-normal) {
+   z-index: 1;
+   @media only screen and (max-width: $break-laptop) {
       padding: 0 $smallPadding;
    }
    align-items: center;
    line-height: 3rem;
-   margin-bottom: 8vw;
-   @media only screen and (max-width: $break-normal) {
+   margin-bottom: 6vw;
+   @media only screen and (max-width: $break-laptop) {
       margin-bottom: $smallPadding;
    }
    // NAV LIST
@@ -49,7 +50,7 @@
                width: 100vw;
                margin: 0;
                line-height: 5rem;
-               &:not(:last-child) {
+               &:not(.c) {
                   border-bottom: 1px rgba(255, 255, 255, 0.075) solid;
                }
             }
