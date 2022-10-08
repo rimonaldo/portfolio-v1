@@ -5,7 +5,7 @@
    display: flex;
    align-items: center;
    padding: 0 $normalPadding;
-   margin-bottom: 350px;
+   margin-bottom: min(150px, 10vw);
    @media only screen and (max-width: $break-laptop) {
       padding: 0 $smallPadding;
       // margin-bottom: 15vh;
@@ -15,15 +15,14 @@
       flex: 1;
    }
 
-
    @media only screen and (max-width: $break-mobile) {
       flex-direction: column;
       flex-direction: column-reverse;
       gap: 30px;
-      margin-bottom: 250px;
+      // margin-bottom: 250px;
    }
    .content-container {
-      flex:3;
+      flex: 3;
       span {
          color: $clr1;
       }
@@ -31,7 +30,9 @@
          width: 100%;
          font-size: 1.7rem;
          margin: 0 auto;
-         flex:3;
+         flex: 3;
+
+         margin-top: 20px;
       }
       h1 {
          margin: 0 auto;
@@ -43,34 +44,37 @@
       }
 
       p {
-
-         
-         font-size: max(1.25vw,14px);
+         font-size: max(1.25vw, 14px);
          // color: rgb(209, 209, 209);
          // width: 80%;
          margin-bottom: 14px;
          line-height: 1.2em;
          @media only screen and (max-width: $break-laptop) {
-            font-size: max(1.8vw,14px);
+            font-size: max(1.8vw, 14px);
          }
          @media only screen and (max-width: $break-hero) {
-            font-size: max(2.2vw,10px);
+            font-size: max(2.2vw, 10px);
             width: 100%;
          }
-         
+
          @media only screen and (max-width: 400px) {
             width: 100%;
          }
          button {
-            line-height: 1em;
-            padding: 5px;
+            // line-height: 1em;
+            // padding: 5px;
+            &.main-btn{
+               @media only screen and (max-width: $break-hero) {
+                  width: 100%;
+               }
+            }
          }
       }
    }
 
    .profile-container {
       z-index: -1;
-      min-width: max(150px, 15vw );
+      min-width: max(150px, 15vw);
 
       // width: 50px;
       display: inline-block;
@@ -89,7 +93,7 @@
          bottom: 0;
          left: 0;
          right: 0;
-         background-color: silver; 
+         background-color: silver;
          border-radius: 50%;
          background-image: url('https://i.ibb.co/bg6HVMM/image.png');
          background-position: center;

@@ -36,7 +36,9 @@ export default {
       mode: 'dark'
     };
   },
-  created() { },
+  created() { 
+    this.toggleMode()
+  },
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen

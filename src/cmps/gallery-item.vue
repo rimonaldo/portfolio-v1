@@ -1,5 +1,7 @@
 <template>
-  <div class="mockup-img" :style="{'backgroundImage': `url(${project})`}"> </div>
+  <div class="mockup-img" :style="{'backgroundImage': `url(${project})`}"> 
+  
+  </div>
 </template>
 <script>
 export default {

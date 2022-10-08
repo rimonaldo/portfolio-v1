@@ -136,7 +136,7 @@
          bottom: 30px;
       }
       @media only screen and (max-width: $break-mobile) {
-         position: static;
+      position: static;
          display: none;
       }
       @media only screen and (max-width: $break-tablet) {
