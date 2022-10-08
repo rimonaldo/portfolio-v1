@@ -88,9 +88,9 @@ body.light {
       border-bottom: 1px rgba(128, 128, 128, 0.323) solid;
    }
 
-   margin-bottom: min(150px,15vw);
+   margin-bottom: $layoutMargin;
    @media only screen and (max-width: $break-mobile) {
-      margin-bottom: 100px;
+      // margin-bottom: 100px;
       
    }
 }

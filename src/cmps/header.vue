@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      mode: 'dark'
+      mode: 'light'
     };
   },
   created() { 

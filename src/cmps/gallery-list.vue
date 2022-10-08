@@ -19,7 +19,7 @@
         </div>
         <div class="tech">
           <header>Tech used</header>
-          <tech-icons :iconsToShow="['vue','vuex','vuer','socket','node','mongodb','cookies']" />
+          <tech-icons :iconsToShow="icons[page]" />
         </div>
 
       </div>
@@ -41,6 +41,7 @@ export default {
   components: { galleryItem, techIcons },
   data() {
     return {
+      icons:[['vue','vuex','vuer','socket','node','mongodb','cookies'],['react','redux','node','mongodb','cookies']],
       projects: ['https://i.ibb.co/JrMxnKy/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
       page: 1,
       script: [`<p> Trailo, which is a Trello clone, is a project management

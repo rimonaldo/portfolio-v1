@@ -4,10 +4,11 @@
             <div class="text-container">
                 <h1>Hello! I'm <span>Rimon</span></h1>
                 <p>
-                    Full Stack/Front End developer with a <span>passion</span> <br>
-                    for learning and creating new things. I
-                    enjoy <span>challenges,</span> <br> and solving problems on my own and with a team. I love writing semantic, <br>
-                    logical, and meaningful code that allows users to <span>enjoy the experience.</span>
+                    <span>Full Stack/Front End developer</span>
+                    <span> with a passion</span> <br>
+                    for learning and creating. I
+                    enjoy <span>challenges,</span> <br> and solving problems on my own and with a team.  <br> I love writing semantic, 
+                    logical, and meaningful code <br> that allows users to <span>enjoy the experience.</span>
                 </p>
             </div>
 
