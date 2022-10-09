@@ -1,0 +1,39 @@
+.pagintaion {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   // margin-top: $layoutMargin;
+   @media only screen and (max-width: $break-mobile) {
+      display: none;
+   }
+
+   $dotSize: clamp(25px, 4vw , 35px);
+   .page-dot {
+      width: $dotSize;
+      height: $dotSize;
+      border-radius: 50%;
+      margin: 0 1em;
+      background-color: white;
+      transition: 0.5s;
+      &.active {
+         background-color: $clr1;
+      }
+   }
+   button {
+      font-family: fa-solid;
+      font-size: calc($dotSize*1.5);
+      padding: 0 1em;
+      color: inherit;
+   }
+   :nth-child(1) {
+      &::before {
+         content: '\f100';
+      }
+   }
+   :last-child {
+      &::before {
+         content: '\f101';
+      }
+   }
+}
+

@@ -35,7 +35,9 @@ export default {
 
     }
   },
-  methods: {},
+  methods: {
+    
+  },
   computed: {
     items() {
       return this.$store.getters.items

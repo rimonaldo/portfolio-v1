@@ -1,57 +1,38 @@
 .gallery-container {
-   // HEADER
    height: max-content;
-   max-width: 100%;
    position: relative;
    .gallery-header {
       padding: 0 $layoutPadding;
       text-align: center;
-      @media only screen and (max-width: $break-tablet) {
-         line-height: 6em;
-         font-size: 1.4em;
-         // margin-bottom: 6em;
-      }
-
-      @media only screen and (max-width: 400px) {
-         line-height: 1.5em;
-         font-size: 1.4em;
-         position: relative;
-         // bottom: 1em;
-      }
-      @media only screen and (max-width: $break-laptop) {
-         margin-bottom: 2em;
-      }
-      font-size: min(3em, 4vw);
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      margin-bottom: $layoutMargin;
+      line-height: 1.2em;
       span {
          color: $clr1;
       }
    }
-
-   // BODY
+   
    .gallery-body {
       filter: blur(0px);
       display: flex;
-      padding: 0 7.5em;
       position: relative;
-      bottom: 20px;
+      padding: 0 7.5em;
+      margin-bottom: 20px;
+
       @media only screen and (max-width: $break-laptop) {
          flex-direction: column;
          padding: 0 $smallPadding;
-      }
-
-      @media only screen and (max-width: $break-laptop) {
-         margin-bottom: 30px;
+         margin-bottom: $layoutMargin;
       }
 
       @media only screen and (max-width: $break-tablet) {
-         padding: 0 $smallPadding;
-         font-size: 13px;
+         // font-size: 13px;
       }
+
       header {
-         font-size: 2.5em;
+         font-size: $headerFont;
          @media only screen and (max-width: $break-mobile) {
             text-align: center;
-            font-size: 1.4em;
          }
 
          @media only screen and (max-width: 550px) {
@@ -59,16 +40,34 @@
          }
       }
 
-      .text {
-         .pagintaion {
-            display: none;
-            @media only screen and (max-width: $break-mobile) {
-               display: flex;
-            }
+      // MOCKUP
+      .mockup-img {
+         width: 200%;
+         height: 30vw;
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         margin-inline-end: 30px;
+         margin-bottom: $layoutMargin;
+         @media only screen and (max-width: $break-laptop) {
+            height: 35vw;
+            width: 100%;
          }
 
+         @media only screen and (max-width: $break-mobile) {
+            height: 40vw;
+         }
+      }
+
+      .text {
+         max-width: clamp(700px,25vw, 750px);
          max-width: 600px;
+         align-self: center;
+         @media only screen and (max-width: 1650px) {
+            max-width: 500px;
+         }
          @media only screen and (max-width: $break-laptop) {
+            position: static;
             max-width: max-content;
             display: flex;
             .script {
@@ -81,91 +80,49 @@
          @media only screen and (max-width: $break-mobile) {
             flex-direction: column;
          }
-         align-self: center;
+
          header {
+            padding-bottom: 5px;
             border-bottom: 1px rgba(128, 128, 128, 0.281) solid;
-            line-height: 1.5em;
          }
+
          p {
-            margin-top: 1em;
-            margin-bottom: 1em;
+            margin-top: 10px;
             line-height: 1.3em;
-            height: 12em;
-            @media only screen and (max-width: $break-laptop) {
-               height: 8em;
-               width: 90%;
+            font-size: 20px;
+            word-spacing: 2px;
+         }
+
+         .script {
+            p {
+               height: 15em;
+               @media only screen and (max-width: $break-laptop) {
+                  // height: max-content;
+                  width: 90%;
+                  font-size: 18px;
+               }
+
+               @media only screen and (max-width: $break-tablet) {
+                  margin-bottom: 40px;
+                  width: 100%;
+                  // height: 16em;
+               }
+               @media only screen and (max-width: $break-mobile) {
+                  height: max-content;
+                  // min-height: 16em;
+                  margin-bottom: 30px;
+                  width: 100%;
+                  // height: 16em;
+               }
             }
+         }
+
+         .pagintaion {
+            display: none;
             @media only screen and (max-width: $break-mobile) {
-               height: max-content;
-               width: 100%;
+               display: flex;
             }
-            @media only screen and (max-width: 560px) {
-               height: max-content;
-            }
-         }
-      }
-
-      // PORTFOLIO
-
-      .mockup-img {
-         width: 200%;
-         height: 45vw;
-         margin-inline-end: 30px;
-         background-size: contain;
-         background-position: center;
-         background-repeat: no-repeat;
-         @media only screen and (max-width: 1700px) {
-            width: 300%;
-         }
-         @media only screen and (max-width: $break-laptop) {
-            width: 100%;
-            margin: 0 auto 4em;
-         }
-      }
-   }
-
-   .pagintaion {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      bottom: 6vw;
-      font-size: 2.5rem;
-      // display: none;
-      @media only screen and (max-width: $break-laptop) {
-         bottom: 30px;
-      }
-      @media only screen and (max-width: $break-mobile) {
-      position: static;
-         display: none;
-      }
-      @media only screen and (max-width: $break-tablet) {
-         // top: -2em;
-      }
-      button {
-         font-family: fa-solid;
-         // padding: 0 0.5em;
-         font-size: 1em;
-      }
-      :nth-child(1) {
-         &::before {
-            content: '\f053';
-         }
-      }
-      :last-child {
-         &::before {
-            content: '\f054';
-         }
-      }
-      .page-dot {
-         width: 25px;
-         height: 25px;
-         border-radius: 50%;
-         margin: 0 1em;
-         background-color: white;
-         transition: 0.5s;
-         &.active {
-            background-color: $clr1;
+            margin-bottom: 25px;
          }
       }
    }

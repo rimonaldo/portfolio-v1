@@ -1,16 +1,21 @@
 .footer-container {
-   margin: 0 auto;
    width: 100vw;
-
-   margin-top: 380px;
+   margin-top: clamp(300px, 100vw , 500px);
    position: relative;
+   background-color: $clr3;
    .footer {
-      padding: 5em $layoutPadding 0;
+      padding: 3em $layoutPadding ;
       border-top: 1px $clr2 solid;
       @media only screen and (max-width: $break-mobile) {
          padding: 5em $smallPadding 0;
       }
       .about {
+         display: flex;
+         border: 1px;
+         justify-content: space-between;
+         > * {
+            flex: 1;
+         }
          @media only screen and (max-width: $break-mobile) {
             flex-direction: column;
             > * {
@@ -18,13 +23,7 @@
                border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
             }
          }
-         display: flex;
-         justify-content: space-between;
-   
-         > * {
-            flex: 1;
-         }
-         
+
          .contact {
             display: flex;
             font-size: 12px;
@@ -51,10 +50,15 @@
          }
       }
    }
-   
 }
 
-
-.body{
-   // border: 5px red solid;
+body {
+   &.light {
+      .footer-container {
+         color: white;
+         input {
+            border: 1px $clr2 solid;
+         }
+      }
+   }
 }

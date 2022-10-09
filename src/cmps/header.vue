@@ -1,7 +1,6 @@
 <template>
-  <section class="main-header">
-    <div class="content">
-      <!-- <div class="logo">logo</div> -->
+  <section class="header-container">
+    <div class="header-content">
       <div @click="toggleMode" :class="[mode === 'dark' ? 'dark':'', 'toggl-mode']">
         <div class="toggl"></div>
         <div class="sun mode"><img
@@ -12,15 +11,15 @@
 
       <ul :class='{show: isMenuOpen}'>
         <router-link to="/blog">
-          <li>Blog</li>
+          <li @click="toggleMenu" >Blog</li>
         </router-link>
         <router-link to="/">
-          <li>Home</li>
+          <li @click="toggleMenu">Home</li>
         </router-link>
-        <li>Gallery</li>
-        <li class="c">Contact</li>
+        <li  @click="emitScroll('.gallery-container')">Gallery</li>
+        <li class="c" @click="emitScroll('.footer-container')">Contact</li>
       </ul>
-      
+
 
       <div class="burger fa-solid" @click="toggleMenu"></div>
     </div>
@@ -36,7 +35,7 @@ export default {
       mode: 'light'
     };
   },
-  created() { 
+  created() {
     this.toggleMode()
   },
   methods: {
@@ -50,7 +49,12 @@ export default {
       elBody.classList = this.mode
       elHtml.classList = this.mode
       console.log(this.mode);
+    },
+    emitScroll(element){
+      this.toggleMenu()
+      this.$emit('scroll', element)
     }
+    
   },
   computed: {},
   unmounted() { },

@@ -26,32 +26,6 @@
   margin: 0;
 }
 
-.btn-main {
-  background: linear-gradient(
-    90deg,
-    rgba(99, 225, 217, 0.801) 0%,
-  
-    rgba(52, 160, 205, 1) 45%,
-    rgba(52, 160, 205, 1) 100%
-  );
-  border: none;
-  color: white;
-  border-radius: 25px;
-  font-size: rem(16px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: lh(55px);
-  padding: 0 6em;
-  font-weight: 600;
-  font-size: 14px;
-  
-}
-
-// .btn-helper
-
-// cover helpers
-
 // Text
 .vertical-text {
   writing-mode: tb-rl;
@@ -63,8 +37,6 @@
   text-transform: uppercase;
   @include type(boldCondensed);
 }
-
-// btn
 
 .disabled-btn {
   cursor: no-drop;

@@ -3,10 +3,10 @@
     <div class="call-to-action">
 
       <h2>Let’s work together!</h2>
-      <p>If you are interested in getting to know more about me, and think I would be a good fit for your team, I would
+      <!-- <p>If you are interested in getting to know more about me, and think I would be a good fit for your team, I would
         appreciate hearing from you!
         <br>
-      </p>
+      </p> -->
 
       <form ref="form" @submit.prevent="sendEmail">
         <div class="top">

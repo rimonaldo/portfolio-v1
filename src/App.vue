@@ -1,5 +1,5 @@
 <template>
-  <app-header />
+  <app-header @scroll="scrollToElement"/>
   <router-view />
 </template>
 
@@ -19,10 +19,19 @@ export default {
   },
   data() {
     return {
-
+      
     }
   },
-  methods: {},
+  methods: {
+    scrollToElement(element) {
+      const el = document.querySelector(element);
+
+      if (el) {
+        // Use el.scrollIntoView() to instantly scroll to the element
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  },
   computed: {
     items() {
       return this.$store.getters.items

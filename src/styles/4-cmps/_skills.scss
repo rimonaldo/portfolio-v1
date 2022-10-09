@@ -1,0 +1,40 @@
+body{
+   .app-page {
+      padding: 0 $normalPadding;
+      margin-bottom: $layoutMargin;
+      @media only screen and (max-width: $break-laptop) {
+         padding: 0 $smallPadding;
+      }
+
+   
+      header {
+         line-height: 1em;
+         text-align: center;
+         font-size: $headerFont;
+         border-bottom: 1px rgba(128, 128, 128, 0.323) solid;
+         padding-bottom: $headerToContent;
+      }
+      .icons {
+         $iconSize: max(3vw, 40px);
+         padding-bottom: 10px;
+         border-bottom: 1px rgba(128, 128, 128, 0.323) solid;
+         margin-bottom: $layoutMargin;
+         .icon-container {
+            svg {
+               width: $iconSize;
+               height: $iconSize;
+            }
+            img {
+               height: $iconSize;
+               width: $iconSize;
+            }
+         }
+      }
+   
+      
+      @media only screen and (max-width: $break-mobile) {
+         // margin-bottom: 100px;
+      }
+   }
+   
+}

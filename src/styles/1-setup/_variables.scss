@@ -2,7 +2,7 @@
 $clr1: #ff4a57;
 $clr2: #23263a;
 $clr3: #2e3043;
-$clr4: darken($clr1, 40%);
+$clr4: darken($clr1, 9%);
 $clr5: white;
 $clr6: #212336;
 $clr7: #ff4a562d;
@@ -22,4 +22,13 @@ $break-wide: 1920px;
 
 
 // MARGINS
-$layoutMargin:min(50px,10vw);
+// $layoutMargin:min(120px,6rem);
+$layoutMargin:clamp(40px,5vw,130px);
+$mobileMargin:20vw;
+$headerToContent:20px;
+
+
+// FONT SIZES
+
+$headerFont:clamp(1.5rem,5vw,3rem);
+
