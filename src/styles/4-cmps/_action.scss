@@ -50,7 +50,7 @@
          justify-content: space-between;
          max-height: 2.5em;
          margin-bottom: min(22px,2vw);
-         font-size: 1.75rem;
+         font-size: clamp(1rem, 8vw , 2rem);
          input {
             display: flex;
             align-items: center;
@@ -59,8 +59,9 @@
             width: 60%;
             border: none;
             border: 1px rgb(175, 175, 175) solid;
-            padding: 0.5em 1em;
+            padding: .6em 1em;
             height: 1em;
+            font-size: clamp(12px , 4vw , 1.2em);
             &::placeholder {
                font-size: 0.5em;
                color: rgb(177, 176, 176);

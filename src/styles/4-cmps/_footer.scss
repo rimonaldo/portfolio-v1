@@ -6,6 +6,7 @@
    padding: clamp(5px, 2vw, 0.8rem) 20vw;
    @media only screen and (max-width: $break-laptop) {
       padding: 10px $smallPadding;
+      padding-top: 1em;
 
    }
 
