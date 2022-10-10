@@ -3,7 +3,7 @@
         <div class="content-container">
             <div class="text-container">
                 <h1>Hello! I'm <span>Rimon</span></h1>
-                <p class="p-animation">
+                <p class="hero-p">
                     Full Stack/Front End developer
                     with a passion
                     for learning and creating. I
@@ -40,10 +40,17 @@ export default {
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
+        },
+        add(){
+            document.querySelector('.hero-p').classList.add('p-animation')
         }
     },
     computed: {},
     unmounted() { },
+    mounted(){
+        const func = this.add
+       setInterval(func,500)
+    }
 };
 </script>
 <style>

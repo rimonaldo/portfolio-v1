@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      mode: Math.random() < 0.5 ? 'dark' : 'light'
+      mode: Math.random() < 0.5 ? 'light' : 'light'
     };
   },
   created() {
