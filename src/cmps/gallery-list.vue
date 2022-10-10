@@ -4,19 +4,21 @@
       <h2>Featured <span>Projects.</span></h2>
     </header>
     <section class="gallery-body">
-
-      <gallery-item :project="projects[page]" />
+      <gallery-item :project="projects[page]" :link="links[page]" />
 
       <div class="text">
+
         <div class="pagintaion">
           <button @click="setPage(-1)"></button>
           <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
           <button @click="setPage(1)"></button>
         </div>
+    
         <div class="script">
           <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
           <div v-html="script[page]"></div>
         </div>
+
         <div class="tech">
           <header>Tech used</header>
           <tech-icons :iconsToShow="icons[page]" />
@@ -31,6 +33,7 @@
       <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
       <button @click="setPage(1)"></button>
     </div>
+    
   </section>
 </template>
 <script>
@@ -41,6 +44,7 @@ export default {
   components: { galleryItem, techIcons },
   data() {
     return {
+      links:['https://ca-traillo.herokuapp.com/#/','https://mrpopcoinprod.herokuapp.com/#/'],
       icons:[['vue','vuex','vuer','socket','node','mongodb','cookies'],['react','redux','node','mongodb','cookies']],
       projects: ['https://i.ibb.co/JrMxnKy/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
       page: 1,

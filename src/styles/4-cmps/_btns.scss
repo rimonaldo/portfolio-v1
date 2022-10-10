@@ -1,7 +1,7 @@
 .main-btn{
     background-color: $clr1;
     border: none;
-    padding: 0 2em;
+    padding: 0 clamp(5px,2vw,2em);
     font-size: 18px;
     line-height: 2em;
     color: white;

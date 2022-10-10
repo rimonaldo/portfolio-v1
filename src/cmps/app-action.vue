@@ -10,7 +10,7 @@
 
       <form ref="form" @submit.prevent="sendEmail">
         <div class="top">
-          <input v-model="mail" type="email" ref="msg" placeholder="email@example.com">
+          <input class="email-input" v-model="mail" type="email" ref="msg" placeholder="email@example.com">
           <button type="submit" class=" main-btn">Say Hello!</button>
         </div>
 

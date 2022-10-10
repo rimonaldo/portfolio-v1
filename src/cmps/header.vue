@@ -11,12 +11,12 @@
 
       <ul :class='{show: isMenuOpen}'>
         <router-link to="/blog">
-          <li @click="toggleMenu" >Blog</li>
+          <li @click="toggleMenu">Blog</li>
         </router-link>
         <router-link to="/">
           <li @click="toggleMenu">Home</li>
         </router-link>
-        <li  @click="emitScroll('.gallery-container')">Gallery</li>
+        <li @click="emitScroll('.gallery-container')">Gallery</li>
         <li class="c" @click="emitScroll('.footer-container')">Contact</li>
       </ul>
 
@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      mode: 'light'
+      mode: Math.random() < 0.5 ? 'dark' : 'light'
     };
   },
   created() {
@@ -50,11 +50,11 @@ export default {
       elHtml.classList = this.mode
       console.log(this.mode);
     },
-    emitScroll(element){
+    emitScroll(element) {
       this.toggleMenu()
       this.$emit('scroll', element)
     }
-    
+
   },
   computed: {},
   unmounted() { },

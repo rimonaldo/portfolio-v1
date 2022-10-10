@@ -3,13 +3,13 @@
         <div class="content-container">
             <div class="text-container">
                 <h1>Hello! I'm <span>Rimon</span></h1>
-                <p>
+                <p class="p-animation">
                     Full Stack/Front End developer
-                    with a passion<br>
+                    with a passion
                     for learning and creating. I
-                    enjoy challenges, <br> and solving problems on my own and with a team. <br> I love writing
+                    enjoy challenges, and solving problems on my own and with a team. I love writing
                     semantic,
-                    logical, and meaningful code <br> that allows users to enjoy the experience.
+                    logical, and meaningful code that allows users to enjoy the experience.
                 </p>
             </div>
 
@@ -34,6 +34,9 @@ export default {
     methods: {
         emitScroll(element) {
             const el = document.querySelector(element);
+            const elInput = document.querySelector('.email-input')
+            // console.log(elInput);
+            elInput.focus()
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
