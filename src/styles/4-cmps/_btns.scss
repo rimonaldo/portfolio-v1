@@ -1,9 +1,9 @@
 .main-btn{
     background-color: $clr1;
     border: none;
-    padding: 0 clamp(5px,2vw,2em);
+    padding: 0 clamp(5px,2vw,2rem);
+    line-height: 2rem;
     font-size: 18px;
-    line-height: 2em;
     color: white;
     cursor: pointer;
     border-radius: 5px;

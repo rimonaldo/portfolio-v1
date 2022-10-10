@@ -16,8 +16,10 @@
         <router-link to="/">
           <li @click="toggleMenu">Home</li>
         </router-link>
-        <li @click="emitScroll('.gallery-container')">Gallery</li>
-        <li class="c" @click="emitScroll('.footer-container')">Contact</li>
+        <router-link to="/">
+          <li @click="emitScroll('.gallery-scroll')">Gallery</li>
+        </router-link>
+        <li class="c" @click="emitScroll('.footer-scroll')">Contact</li>
       </ul>
 
 

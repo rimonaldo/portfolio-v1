@@ -21,33 +21,33 @@
       gap: 30px;
    }
    .content-container {
-      @media only screen and (max-width: $break-mobile) {
-         // border: 1px red solid;
-         // width: 70%;
-      }
       flex: 3;
       h1 {
          margin: 0 auto;
          font-size: clamp(2rem, 7vw, 4rem);
          margin-bottom: $headerToContent;
          line-height: 1em;
-         span{
+         span {
             color: $clr1;
          }
-    
       }
-
+      $heroWidth:200px;
       p {
          font-size: clamp(14px, 3vw, 24px);
          line-height: 1.3em;
+         max-width: $heroWidth;
+         
          @media only screen and (max-width: $break-mobile) {
             margin-bottom: $headerToContent;
          }
+
+         // ANIMATION
          background-position: left;
          background-size: 0% 100%;
          background-image: linear-gradient(white, white);
          display: inline;
          background-repeat: no-repeat;
+
          &:hover {
             cursor: none;
             color: $clr2;
@@ -55,7 +55,7 @@
             animation-timing-function: linear;
             background-size: 100% 100%;
          }
-         &.p-animation{
+         &.p-animation {
             @media only screen and (max-width: $break-mobile) {
                cursor: none;
                color: $clr2;
@@ -73,39 +73,40 @@
       }
 
       .main-btn {
+         position: relative;
+         bottom: 40px;
          margin-top: $layoutMargin;
-         width:55%;
+         width: 40%;
          font-size: 22px;
+         line-height: 2em;
          @media only screen and (max-width: $break-mobile) {
-            width:100%;
+            width: 100%;
+            position: static;
          }
       }
    }
 
-   .avatar-container {
-      z-index: -1;
-      min-width: max(150px, 15vw);
-      display: inline-block;
-      position: relative;
-      @media only screen and (max-width: $break-mobile) {
-         margin: 0 auto;
-         display: none;
-      }
-      .dummy {
-         margin-top: 100%;
-      }
-      .avatar {
-         position: absolute;
-         top: 0;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         background-color: silver;
-         border-radius: 50%;
-         background-image: url('https://i.ibb.co/bg6HVMM/image.png');
-         background-position: center;
-         background-size: 87.5%;
-         background-repeat: no-repeat;
+   
+}
+
+body {
+   &.light {
+      .content-container{
+         p {
+            background-image: linear-gradient( $clr2, rgb(0, 0, 0) );
+            &:hover{
+               color: #f6f6fa;
+            }
+            &.p-animation {
+               @media only screen and (max-width: $break-mobile) {
+                  cursor: none;
+                  color: #f6f6fa;
+                  transition: background-size linear 15s, color 0.2s;
+                  animation-timing-function: linear;
+                  background-size: 100% 100%;
+               }
+            }
+         }
       }
    }
 }

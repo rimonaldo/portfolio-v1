@@ -1,12 +1,16 @@
 .action-container {
    padding: 0 $normalPadding;
-   position: absolute;
+   position: relative;
    margin-left: auto;
    margin-right: auto;
    left: 0;
    right: 0;
-   bottom: 70%;
+   // top: 1vw;
+   z-index: 1;
+   // bottom: 70%;
+   width: 90%;
    @media only screen and (max-width: $break-laptop) {
+      width: 100%;
       padding: 0 $smallPadding;
    }
 }
@@ -14,23 +18,17 @@
 .call-to-action {
    background: $clr5;
    color: $clr2;
-   padding: 2vw;
-   width: 70%;
+   padding: min(22px,2vw) max(1.2vw, 10px);
    border-radius: 5px;
    z-index: 1;
    margin: 0 auto;
-   @media only screen and (max-width: $break-laptop) {
-      width: 80%;
-   }
-   @media only screen and (max-width: $break-tablet) {
-      width: 100%;
-   }
+
    @media only screen and (max-width: $break-mobile) {
       font-size: 12px;
    }
    h2 {
-      font-size: clamp(2rem, 10vw, 5rem);
-      margin-bottom: 22px;
+      font-size: clamp(1.5rem, 7vw, 3rem);
+      margin-bottom: min(22px,2vw);
       text-align: center;
       border-bottom: 1px rgba(197, 197, 197, 0.103) solid;
       padding-bottom: 0.5rem;
@@ -46,15 +44,13 @@
       .top {
          display: flex;
          justify-content: space-between;
-         max-height: 45px;
-         margin-bottom: 2em;
-         button {
-            width: 30%;
-         }
+         max-height: 2.5em;
+         margin-bottom: min(22px,2vw);
+         
          input {
             display: flex;
             align-items: center;
-            font-size: clamp(12px, 7vw, 2rem);
+            font-size: clamp(12px, 5vw, 2rem);
             border-radius: 25px;
             width: 60%;
             border: none;
@@ -68,28 +64,29 @@
             }
          }
 
+         button {
+            // width: flex;
+            margin-left: 1rem;
+            flex: 1;
+            font-size: clamp(.8rem, 5vw, 1.5rem);
+            @media only screen and (max-width: $break-mobile) {
+               font-size: clamp(.5rem, 4vw, 1.5rem);
+            }
+         }
+
          .marked-input {
             color: $clr1;
          }
       }
-      textarea {
-         font-size: clamp(0.5rem, 4vw, 1.2rem);
-         line-height: 1.5em;
-         @media only screen and (max-width: $break-mobile) {
-            // font-size: 10px;
-         }
-      }
-      button {
-         font-size: clamp(0.5rem, 3.5vw, 1.2rem);
-      }
-   }
 
-   textarea {
-      font-size: 1em;
-      width: 60%;
-      padding: 0 1em;
-      @media only screen and (max-width: $break-mobile) {
+      textarea {
+         padding: 0 1em;
+         font-size: clamp(0.8rem, 3vw, 1.2rem);
+         line-height: 1.5em;
          width: 100%;
+         @media only screen and (max-width: $break-mobile) {
+            width: 100%;
+         }
       }
    }
 }

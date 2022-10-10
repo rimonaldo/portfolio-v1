@@ -1,0 +1,27 @@
+.avatar-container {
+    z-index: -1;
+    min-width: max(150px, 15vw);
+    display: inline-block;
+    position: relative;
+    @media only screen and (max-width: $break-mobile) {
+       margin: 0 auto;
+       display: none;
+    }
+    .dummy {
+       margin-top: 100%;
+    }
+    .avatar {
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       background-color: silver;
+       border-radius: 50%;
+       background-image: url('https://i.ibb.co/bg6HVMM/image.png');
+       background-position: center;
+       background-size: 87.5%;
+       background-repeat: no-repeat;
+       cursor: pointer;
+    }
+ }

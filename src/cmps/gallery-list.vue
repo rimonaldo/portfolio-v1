@@ -1,5 +1,6 @@
 <template>
   <section class="gallery-container">
+    <div class="gallery-scroll"></div>
     <header class="gallery-header">
       <h2>Featured <span>Projects.</span></h2>
     </header>
@@ -38,7 +39,7 @@
 </template>
 <script>
 import galleryItem from './gallery-item.vue';
-import techIcons from './icons.vue';
+import techIcons from './tech-icons.vue';
 export default {
   name: 'ProjectApp',
   components: { galleryItem, techIcons },

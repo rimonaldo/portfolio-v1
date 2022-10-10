@@ -1,0 +1,68 @@
+.footer-container {
+    margin-top: clamp(300px, 100vw, 500px);
+    position: relative;
+    background-color: $clr3;
+    .footer {
+       padding: clamp(1em, 5vw , 2rem) $layoutPadding;
+       border-top: 1px $clr2 solid;
+       @media only screen and (max-width: $break-mobile) {
+          padding: 5em $smallPadding 0;
+       }
+       .about {
+          display: flex;
+          border: 1px;
+          justify-content: space-between;
+          font-size: clamp(12px,3vw,1rem);
+          > * {
+             flex: 1;
+          }
+          @media only screen and (max-width: $break-mobile) {
+             flex-direction: column;
+             > * {
+                margin-block-end: 1em;
+                border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+             }
+          }
+          
+          .contact {
+             display: flex;
+             align-items: center;
+             font-size: 12px;
+             justify-content: space-between;
+             > * {
+                border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+                padding-bottom: 5px;
+                display: flex;
+             }
+             @media only screen and (max-width: $break-mobile) {
+                flex-direction: column;
+                line-height: 2em;
+                >*{
+                   width: 100%;
+                   // margin: 0 auto;
+                }
+             }
+          }
+          img {
+             height: 1em;
+             margin-inline-end: min(5vw, 10px);
+          }
+          .loc {
+             display: flex;
+          }
+ 
+       }
+    }
+ }
+ 
+ body {
+    &.light {
+       .footer-container {
+          color: white;
+          input {
+             border: 1px $clr2 solid;
+          }
+       }
+    }
+ }
+ 

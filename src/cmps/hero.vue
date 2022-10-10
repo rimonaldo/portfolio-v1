@@ -13,7 +13,7 @@
                 </p>
             </div>
 
-            <button @click="emitScroll('.footer-container')" class="main-btn">Lets team up!</button>
+            <button @click="scrollToFooter('.footer-scroll')" class="main-btn">Lets team up!</button>
         </div>
 
         <div class="avatar-container">
@@ -32,24 +32,27 @@ export default {
     },
     created() { },
     methods: {
-        emitScroll(element) {
+        scrollToFooter(element) {
+            const focus = this.focus
+            setTimeout(focus, 500)
             const el = document.querySelector(element);
-            const elInput = document.querySelector('.email-input')
-            // console.log(elInput);
-            elInput.focus()
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
         },
-        add(){
+        focus() {
+            const elInput = document.querySelector('.email-input')
+            elInput.focus()
+        },
+        add() {
             document.querySelector('.hero-p').classList.add('p-animation')
         }
     },
     computed: {},
     unmounted() { },
-    mounted(){
-        const func = this.add
-       setInterval(func,500)
+    mounted() {
+        const animatePar = this.add
+        setInterval(animatePar, 500)
     }
 };
 </script>

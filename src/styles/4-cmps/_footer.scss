@@ -1,53 +1,77 @@
 .footer-container {
-   width: 100vw;
-   margin-top: clamp(300px, 100vw , 500px);
    position: relative;
    background-color: $clr3;
-   .footer {
-      padding: 3em $layoutPadding ;
-      border-top: 1px $clr2 solid;
-      @media only screen and (max-width: $break-mobile) {
-         padding: 5em $smallPadding 0;
-      }
-      .about {
-         display: flex;
-         border: 1px;
-         justify-content: space-between;
-         > * {
-            flex: 1;
-         }
-         @media only screen and (max-width: $break-mobile) {
-            flex-direction: column;
-            > * {
-               margin-block-end: 1em;
-               border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
-            }
-         }
+   display: flex;
+   justify-content: flex-end;
+   padding: clamp(5px, 2vw, 0.8rem) 20vw;
 
-         .contact {
-            display: flex;
-            font-size: 12px;
-            justify-content: space-between;
-            > * {
-               display: flex;
-            }
+   @media only screen and (max-width: $break-laptop) {
+      padding: 10px $smallPadding;
+   }
+
+   .avatar {
+      display: none;
+      border-radius: 50%;
+      background-image: url('https://i.ibb.co/bg6HVMM/image.png');
+      background-position: center;
+      background-size: 90%;
+      z-index: 3;
+      width: clamp(2.5rem, 5vw, 4rem);
+      height: clamp(2.5rem, 5vw, 4rem);
+      background-color: gray;
+      @media only screen and (max-width: $break-mobile) {
+         display: block;
+      }
+   }
+
+   .icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .icon-container {
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         svg {
+            width: 55px;
+            height: clamp(2.5rem, 5vw, 4rem);
+            margin-inline-start: max(2vw, 20px);
+            cursor: pointer;
          }
          img {
-            height: 1em;
-            margin-inline-end: min(5vw, 10px);
+            width: 55px;
+            height: 2em;
          }
-         .loc {
-            display: flex;
+         .icon-name {
+            display: none;
          }
-         ul {
-            list-style: none;
-            padding: 0;
-            li {
-               display: flex;
-               margin-block-end: 1em;
-               justify-content: flex-start;
-            }
-         }
+      }
+   }
+
+   .footer-scroll{
+      padding: 0 20vw;
+      width: 100%;
+      height: 1.5em;
+      border: 1px rgba(255, 0, 0, 0) solid;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      bottom: -1.5em;
+      // display: none;
+      background-color: black;
+      color: rgb(56, 56, 56);
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width: $break-laptop) {
+         padding: 0 $smallPadding;
+         font-size: 12px;
       }
    }
 }

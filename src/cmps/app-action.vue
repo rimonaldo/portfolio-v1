@@ -13,8 +13,7 @@
           <input class="email-input" v-model="mail" type="email" ref="msg" placeholder="email@example.com">
           <button type="submit" class=" main-btn">Say Hello!</button>
         </div>
-
-        <textarea name="message" id="" cols="30" rows="3" v-model="showMail"></textarea>
+        <textarea name="message" id="" cols="30" rows="2" v-model="showMail"></textarea>
       </form>
 
     </div>

@@ -1,6 +1,8 @@
 .gallery-container {
    height: max-content;
    position: relative;
+   margin-bottom: clamp(2rem,15vw,20rem);
+
    .gallery-header {
       padding: 0 $layoutPadding;
       text-align: center;
@@ -17,7 +19,7 @@
       display: flex;
       position: relative;
       padding: 0 7.5em;
-      margin-bottom: 20px;
+      margin-bottom: max(2rem,40px);
 
       @media only screen and (max-width: $break-laptop) {
          flex-direction: column;
@@ -91,28 +93,23 @@
             line-height: 1.3em;
             font-size: 20px;
             word-spacing: 2px;
+            
          }
 
          .script {
             p {
                height: 15em;
+               font-size: clamp(1rem, 1.5vw, 1.5rem);
                @media only screen and (max-width: $break-laptop) {
-                  // height: max-content;
                   width: 90%;
-                  font-size: 18px;
                }
-
                @media only screen and (max-width: $break-tablet) {
                   margin-bottom: 40px;
                   width: 100%;
-                  // height: 16em;
                }
                @media only screen and (max-width: $break-mobile) {
                   height: max-content;
-                  // min-height: 16em;
                   margin-bottom: 30px;
-                  width: 100%;
-                  // height: 16em;
                }
             }
          }
@@ -125,6 +122,18 @@
             margin-bottom: 25px;
          }
       }
+   }
+
+   .gallery-scroll{
+      width: 20px;
+      height: 10%;
+      border: 1px rgba(255, 0, 0, 0) solid;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: -3em;
    }
 }
 

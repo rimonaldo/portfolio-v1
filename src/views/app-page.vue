@@ -20,7 +20,7 @@ import appFooter from '../cmps/app-footer.vue'
 import itemList from '../cmps/item-list.vue'
 import appHero from '../cmps/hero.vue'
 import galleryList from '../cmps/gallery-list.vue'
-import techIcons from '../cmps/icons.vue'
+import techIcons from '../cmps/tech-icons.vue'
 export default {
   components: {
     appHeader,
