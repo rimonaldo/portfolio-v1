@@ -13,7 +13,7 @@
       </a>
     </section>
     
-    <div class="footer-scroll">copyrights are resereved to rimon sade</div>
+    <div class="footer-scroll"><span>©</span> opyrights - All rights resereved to Rimon Sade</div>
   </div>
 </template>
   

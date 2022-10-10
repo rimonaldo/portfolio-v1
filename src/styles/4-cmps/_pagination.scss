@@ -7,7 +7,14 @@
       display: none;
    }
 
-   $dotSize: clamp(25px, 4vw , 35px);
+   $dotSize: clamp(10px, 8vw , 35px);
+   @media only screen and (max-width: $break-mobile) {
+      $dotSize: clamp(5px, 5vw , 35px);
+   }
+   @media only screen and (max-width: 400px) {
+      $dotSize: clamp(5px, 5vw , 35px);
+   }
+   font-size: $dotSize;
    .page-dot {
       width: $dotSize;
       height: $dotSize;
@@ -21,8 +28,9 @@
    }
    button {
       font-family: fa-solid;
-      font-size: calc($dotSize*1.5);
-      padding: 0 1em;
+      font-size: 1em;
+      font-size: 1.5em;
+      padding: 0 .5em;
       color: inherit;
    }
    :nth-child(1) {

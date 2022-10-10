@@ -4,9 +4,9 @@
    display: flex;
    justify-content: flex-end;
    padding: clamp(5px, 2vw, 0.8rem) 20vw;
-
    @media only screen and (max-width: $break-laptop) {
       padding: 10px $smallPadding;
+
    }
 
    .avatar {
@@ -38,7 +38,7 @@
          justify-content: center;
 
          svg {
-            width: 55px;
+            width: clamp(2.5rem, 5vw, 4rem);
             height: clamp(2.5rem, 5vw, 4rem);
             margin-inline-start: max(2vw, 20px);
             cursor: pointer;
@@ -66,12 +66,17 @@
       bottom: -1.5em;
       // display: none;
       background-color: black;
-      color: rgb(56, 56, 56);
+      color: rgb(36, 36, 36);
+      font-size: clamp(8px,2vw,13px);
+      span{
+         color: $clr7;
+         font-size: 1.2em;
+
+      }
       display: flex;
       align-items: center;
       @media only screen and (max-width: $break-laptop) {
          padding: 0 $smallPadding;
-         font-size: 12px;
       }
    }
 }

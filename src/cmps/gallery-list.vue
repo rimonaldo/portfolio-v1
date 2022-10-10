@@ -14,14 +14,17 @@
           <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
           <button @click="setPage(1)"></button>
         </div>
-    
+
         <div class="script">
           <header>{{page === 0 ? 'Trailo':'popCoin'}}</header>
           <div v-html="script[page]"></div>
+          <router-link to="/blog" v-if="page !== 0 ">
+            <span>Read a blog post about my journey developing popCoin here!</span>
+          </router-link>
         </div>
 
         <div class="tech">
-          <header>Tech used</header>
+          <header>Tech stack</header>
           <tech-icons :iconsToShow="icons[page]" />
         </div>
 
@@ -34,7 +37,7 @@
       <div :class="[idx === page ? 'active' : '', 'page-dot']" v-for="(project,idx) in projects" :key="idx"></div>
       <button @click="setPage(1)"></button>
     </div>
-    
+
   </section>
 </template>
 <script>
@@ -45,8 +48,8 @@ export default {
   components: { galleryItem, techIcons },
   data() {
     return {
-      links:['https://ca-traillo.herokuapp.com/#/','https://mrpopcoinprod.herokuapp.com/#/'],
-      icons:[['vue','vuex','vuer','socket','node','mongodb','cookies'],['react','redux','node','mongodb','cookies']],
+      links: ['https://ca-traillo.herokuapp.com/#/', 'https://mrpopcoinprod.herokuapp.com/#/'],
+      icons: [['vue', 'vuex', 'vuer', 'socket', 'node', 'mongodb', 'cookies'], ['react', 'redux', 'node', 'mongodb', 'cookies']],
       projects: ['https://i.ibb.co/JrMxnKy/Scene.png', 'https://i.ibb.co/pxG17H7/Scene.png'],
       page: 1,
       script: [`<p> Trailo, which is a Trello clone, is a project management
@@ -60,13 +63,12 @@ export default {
           all while encompassing the  iconic Trello draggability.  </p>`,
 
         `<p>
-          popCoin
           popCoin is a blockchain token demo app that is designed to let you manage your contacts, receive and transfer tokens, and mine transactions. 
           The token logic was developed as a class with methods, to keep all of its logic encapsulated. 
           The key concepts that I implemented include blockchain structure, transactions,
            and mining, and were inspired by popular cryptocurrencies, including Ether and Bitcoin. 
-          <br>
-          Read a blog post about my journey developing popCoin here! </p>
+          <br>   
+           </p>
           `
       ]
 

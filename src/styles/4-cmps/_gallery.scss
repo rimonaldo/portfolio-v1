@@ -18,7 +18,7 @@
       filter: blur(0px);
       display: flex;
       position: relative;
-      padding: 0 7.5em;
+      padding: 0 7.5rem;
       margin-bottom: max(2rem,40px);
 
       @media only screen and (max-width: $break-laptop) {
@@ -71,6 +71,7 @@
          @media only screen and (max-width: $break-laptop) {
             position: static;
             max-width: max-content;
+            width: 100%;
             display: flex;
             .script {
                flex: 2;
@@ -84,22 +85,20 @@
          }
 
          header {
-            padding-bottom: 5px;
+            padding-bottom: 10px;
             border-bottom: 1px rgba(128, 128, 128, 0.281) solid;
          }
 
          p {
             margin-top: 10px;
             line-height: 1.3em;
-            font-size: 20px;
-            word-spacing: 2px;
-            
+            // word-spacing: 2px;
          }
 
          .script {
             p {
                height: 15em;
-               font-size: clamp(1rem, 1.5vw, 1.5rem);
+               font-size: clamp(.9rem, 1.5vw, 1.2rem);
                @media only screen and (max-width: $break-laptop) {
                   width: 90%;
                }
@@ -112,6 +111,14 @@
                   margin-bottom: 30px;
                }
             }
+         }
+
+         a{
+            color: #f7a544;
+            border-bottom: 1px rgba(255, 255, 255, 0.329) solid;
+            border-bottom: 2px $clr2 solid;
+            position: relative;
+            bottom: 3vw;
          }
 
          .pagintaion {

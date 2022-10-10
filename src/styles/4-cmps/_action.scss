@@ -13,6 +13,9 @@
       width: 100%;
       padding: 0 $smallPadding;
    }
+   @media only screen and (max-width: 380px) {
+      padding: 0 10px;
+   }
 }
 
 .call-to-action {
@@ -27,11 +30,12 @@
       font-size: 12px;
    }
    h2 {
-      font-size: clamp(1.5rem, 7vw, 3rem);
+      font-size: clamp(1rem, 7vw, 3rem);
       margin-bottom: min(22px,2vw);
       text-align: center;
       border-bottom: 1px rgba(197, 197, 197, 0.103) solid;
-      padding-bottom: 0.5rem;
+      // padding-bottom:clamp(.1rem, 1vw, .5rem);
+      line-height: 1em;
    }
 
    p {
@@ -46,31 +50,34 @@
          justify-content: space-between;
          max-height: 2.5em;
          margin-bottom: min(22px,2vw);
-         
+         font-size: 1.75rem;
          input {
             display: flex;
             align-items: center;
-            font-size: clamp(12px, 5vw, 2rem);
+            font-size: clamp(12px, 5vw, 2em);
             border-radius: 25px;
             width: 60%;
             border: none;
             border: 1px rgb(175, 175, 175) solid;
             padding: 0.5em 1em;
+            height: 1em;
             &::placeholder {
                font-size: 0.5em;
                color: rgb(177, 176, 176);
                position: relative;
                bottom: 0.25em;
             }
+
          }
 
          button {
             // width: flex;
-            margin-left: 1rem;
+            margin-left: min(1rem,5vw);
             flex: 1;
             font-size: clamp(.8rem, 5vw, 1.5rem);
             @media only screen and (max-width: $break-mobile) {
-               font-size: clamp(.5rem, 4vw, 1.5rem);
+               font-size: clamp(.3rem, 3vw, 1.5rem);
+               line-height: 1em;
             }
          }
 
@@ -81,7 +88,7 @@
 
       textarea {
          padding: 0 1em;
-         font-size: clamp(0.8rem, 3vw, 1.2rem);
+         font-size: clamp(0.6rem, 2.5vw, 1.2rem);
          line-height: 1.5em;
          width: 100%;
          @media only screen and (max-width: $break-mobile) {
