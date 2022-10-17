@@ -8,7 +8,9 @@
       text-align: center;
       font-size: clamp(1.5rem, 5vw, 3rem);
       margin-bottom: $layoutMargin;
-      line-height: 1.2em;
+      line-height: 1.2em;  
+      // padding-top: min(15px,2vw);
+      padding-top: clamp(5px, 1vw, 1rem);
       span {
          color: $clr1;
       }
@@ -18,7 +20,7 @@
       filter: blur(0px);
       display: flex;
       position: relative;
-      padding: 0 $galleryPadding;
+      padding: 1em $galleryPadding;
       margin-bottom: max(2rem,40px);
 
       @media only screen and (max-width: $break-laptop) {
@@ -61,7 +63,7 @@
      
       .text {
          max-width: clamp(600px,15vw, 750px);
-         // max-width: min(800px,30vw);
+         max-width: 500px;
          align-self: center;
          @media only screen and (max-width: 1650px) {
             max-width: 450px;
