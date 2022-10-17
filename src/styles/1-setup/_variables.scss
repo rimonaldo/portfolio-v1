@@ -10,12 +10,13 @@ $clr7: #ff4a562d;
 $layoutPadding: min(10vw, 400px);
 $normalPadding: 15vw;
 $smallPadding: 7.5vw;
+$galleryPadding: 9.5vw;
 $headerHeight: 90px;
 $layoutWide: 10em;
 
 // LAYOUT BREAKPOINTS
 $break-hero: 650px;
-$break-mobile: 750px;
+$break-mobile: 850px;
 $break-tablet: 900px;
 $break-laptop: 1360px;
 $break-wide: 1920px;
@@ -30,5 +31,5 @@ $headerToContent:20px;
 
 // FONT SIZES
 
-$headerFont:clamp(1.5rem,5vw,3rem);
-
+$headerFont:clamp(1.5rem,4vw,3rem);
+$h3:clamp(1.5rem,3vw,30px);

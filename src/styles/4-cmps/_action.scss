@@ -5,9 +5,7 @@
    margin-right: auto;
    left: 0;
    right: 0;
-   // top: 1vw;
    z-index: 1;
-   // bottom: 70%;
    width: 90%;
    @media only screen and (max-width: $break-laptop) {
       width: 100%;
@@ -21,7 +19,7 @@
 .call-to-action {
    background: $clr5;
    color: $clr2;
-   padding: min(22px,2vw) max(1.2vw, 10px);
+   padding: min(22px, 2vw) max(1.2vw, 10px);
    border-radius: 5px;
    z-index: 1;
    margin: 0 auto;
@@ -31,10 +29,9 @@
    }
    h2 {
       font-size: clamp(1rem, 7vw, 3rem);
-      margin-bottom: min(22px,2vw);
+      margin-bottom: min(22px, 2vw);
       text-align: center;
       border-bottom: 1px rgba(197, 197, 197, 0.103) solid;
-      // padding-bottom:clamp(.1rem, 1vw, .5rem);
       line-height: 1em;
    }
 
@@ -49,8 +46,8 @@
          display: flex;
          justify-content: space-between;
          max-height: 2.5em;
-         margin-bottom: min(22px,2vw);
-         font-size: clamp(1rem, 8vw , 2rem);
+         margin-bottom: min(22px, 2vw);
+         font-size: clamp(1rem, 8vw, 2rem);
          input {
             display: flex;
             align-items: center;
@@ -59,25 +56,23 @@
             width: 60%;
             border: none;
             border: 1px rgb(175, 175, 175) solid;
-            padding: .6em 1em;
+            padding: 0.6em 1em;
             height: 1em;
-            font-size: clamp(12px , 4vw , 1.2em);
+            font-size: clamp(12px, 4vw, 1.2em);
             &::placeholder {
                font-size: 0.5em;
                color: rgb(177, 176, 176);
                position: relative;
                bottom: 0.25em;
             }
-
          }
 
          button {
-            // width: flex;
-            margin-left: min(1rem,5vw);
+            margin-left: min(1rem, 5vw);
             flex: 1;
-            font-size: clamp(.8rem, 5vw, 1.5rem);
+            font-size: clamp(0.8rem, 5vw, 1.5rem);
             @media only screen and (max-width: $break-mobile) {
-               font-size: clamp(.3rem, 3vw, 1.5rem);
+               font-size: clamp(0.3rem, 3vw, 1.5rem);
                line-height: 1em;
             }
          }

@@ -18,7 +18,7 @@
       filter: blur(0px);
       display: flex;
       position: relative;
-      padding: 0 7.5rem;
+      padding: 0 $galleryPadding;
       margin-bottom: max(2rem,40px);
 
       @media only screen and (max-width: $break-laptop) {
@@ -27,9 +27,7 @@
          margin-bottom: $layoutMargin;
       }
 
-      @media only screen and (max-width: $break-tablet) {
-         // font-size: 13px;
-      }
+
 
       header {
          font-size: $headerFont;
@@ -62,11 +60,11 @@
       }
      
       .text {
-         max-width: clamp(700px,25vw, 750px);
-         max-width: 600px;
+         max-width: clamp(600px,15vw, 750px);
+         // max-width: min(800px,30vw);
          align-self: center;
          @media only screen and (max-width: 1650px) {
-            max-width: 500px;
+            max-width: 450px;
          }
          @media only screen and (max-width: $break-laptop) {
             position: static;

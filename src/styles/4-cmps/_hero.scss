@@ -10,21 +10,22 @@
    @media only screen and (max-width: $break-laptop) {
       padding: 0 $smallPadding;
    }
-
+   
    > * {
       flex: 1;
    }
    gap: 10vw;
-
+   
    @media only screen and (max-width: $break-mobile) {
       flex-direction: column-reverse;
       gap: 30px;
+      margin-bottom: 0;
    }
    .content-container {
       flex: 3;
       h1 {
          margin: 0 auto;
-         font-size: clamp(2rem, 7vw, 4rem);
+         font-size: clamp(2rem, 5vw, 4rem);
          margin-bottom: $headerToContent;
          line-height: 1em;
          span {
@@ -33,7 +34,7 @@
       }
       $heroWidth:200px;
       p {
-         font-size: clamp(14px, 3vw, 24px);
+         font-size: clamp(14px, 2.3vw, 22px);
          line-height: 1.3em;
          max-width: $heroWidth;
          
@@ -51,7 +52,7 @@
          &:hover {
             cursor: none;
             color: $clr2;
-            transition: background-size linear 13s, color 0.2s;
+            transition: background-size linear 14s, color 0.2s;
             animation-timing-function: linear;
             background-size: 100% 100%;
          }
@@ -59,7 +60,7 @@
             @media only screen and (max-width: $break-mobile) {
                cursor: none;
                color: $clr2;
-               transition: background-size linear 15s, color 0.2s;
+               transition: background-size linear 14s, color 0.2s;
                animation-timing-function: linear;
                background-size: 100% 100%;
             }
@@ -80,8 +81,12 @@
          font-size: 22px;
          line-height: 2em;
          @media only screen and (max-width: $break-mobile) {
+            font-size: $headerFont;
+            line-height: 1.5em;
             width: 100%;
             position: static;
+            margin-top: $headerToContent;
+            margin-bottom: 10px;
          }
       }
    }
@@ -101,8 +106,7 @@ body {
                @media only screen and (max-width: $break-mobile) {
                   cursor: none;
                   color: #f6f6fa;
-                  transition: background-size linear 15s, color 0.2s;
-                  animation-timing-function: linear;
+                  transition: background-size linear 14s, color 0.2s;
                   background-size: 100% 100%;
                }
             }

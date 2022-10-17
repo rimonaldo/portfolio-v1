@@ -3,7 +3,7 @@
         <div class="content-container">
             <div class="text-container">
                 <h1>Hello! I'm <span>Rimon</span></h1>
-                <p class="hero-p">
+                <p class="hero-p hero-par">
                     Full Stack/Front End developer
                     with a passion
                     for learning and creating. I
@@ -26,11 +26,6 @@
 <script>
 export default {
     name: 'ProjectApp',
-    components: {},
-    data() {
-        return {};
-    },
-    created() { },
     methods: {
         scrollToFooter(element) {
             const focus = this.focus
@@ -48,8 +43,6 @@ export default {
             document.querySelector('.hero-p').classList.add('p-animation')
         }
     },
-    computed: {},
-    unmounted() { },
     mounted() {
         const animatePar = this.add
         setInterval(animatePar, 500)

@@ -13,6 +13,10 @@ body{
          font-size: $headerFont;
          border-bottom: 1px rgba(128, 128, 128, 0.323) solid;
          padding-bottom: $headerToContent;
+         @media only screen and (max-width: $break-mobile) {
+            padding: 0;
+            line-height: 1.475em;
+         }
       }
       .icons {
          $iconSize: max(3vw, 40px);

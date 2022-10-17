@@ -47,6 +47,8 @@ export default {
     toggleMode() {
       const elBody = document.querySelector('body')
       const elHtml = document.querySelector('html')
+      const elHeroP = document.querySelector('.hero-par')
+      // elHeroP.classList.remove('.hero-p')
       this.mode = this.mode === 'dark' ? 'light' : 'dark'
       elBody.classList = this.mode
       elHtml.classList = this.mode
